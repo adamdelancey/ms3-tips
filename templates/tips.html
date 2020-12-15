@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips</title>
-</head>
-<body>
-        {% for tip in tips %}
+{% extends "base.html" %}
+{% block content %}
+
+<h2>check this is extending</h2>
+    {% for tip in tips %}
             {{ tip.tip_name }}<br>
             {{ tip.category_name }}<br>
-            {{ tip.tip_long }}<br>
+            {{ tip.tip_short }}<br>
             {{ tip.tip_img }}<br>          
 
         {% endfor %}
-    
-</body>
-</html>
+
+{% endblock %}
