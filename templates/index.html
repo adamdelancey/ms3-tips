@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index-style.css') }}" type="text/css">
+{% endblock %}
+
+{% block content %}
 
 <header class="v-header container">
     <div class="fullscreen-video-wrap">
@@ -15,9 +13,6 @@
     <div class="header-overlay"></div>
     <div class="header-content">
         <h1>Do What The Locals Do</h1>       
-        <a href="{{ url_for('tips') }}" class="btn">Discover More</a>
-    </div>
-</header>
+        <a href="{{ url_for('tips') }}" class="discover-btn">Discover More</a>
    
-</body>
-</html>
+{% endblock %}
