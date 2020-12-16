@@ -12,6 +12,31 @@
     <title>Tips</title>
 </head>
 <body>
+    <header>       
+        <!--top navbar-->
+         <nav class="nav-extended cyan">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('tips') }}" class="brand-logo">Tips</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('tips') }}">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--side navbar-->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4>Tips</h4></li>
+            <li><a href="{{ url_for('tips') }}">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </header>
 {% block content %}
 
 {% endblock %}
