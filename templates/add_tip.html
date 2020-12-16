@@ -3,20 +3,48 @@
 
     <h3 class="cyan-text center-align">Add Task</h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix cyan-text"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="fas fa-phone prefix cyan-text"></i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
+                    <i class="fas fa-pencil-alt prefix cyan-text"></i>
+                    <input id="tip_name" name="tip_name" minlength="5" 
+                        maxlength="20" type="text" class="validate" required>
+                    <label for="tip_name">Tip Name</label>
                 </div>
             </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix cyan-text"></i>                    
+                    <textarea id="tip_short" name="tip_short" class="materialize-textarea validate"
+                    minlength="10" maxlength="30" required></textarea>
+                    <label for="tip_short">Short Description</label>
+                </div>
+            </div>            
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix cyan-text"></i>                    
+                    <textarea id="tip_long" name="tip_long" class="materialize-textarea validate"
+                    minlength="100" maxlength="300" required></textarea>
+                    <label for="tip_long">Full Details - Tell Us More!</label>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-camera-retro prefix cyan-text"></i>                    
+                    <textarea id="tip_img" name="tip_img" class="materialize-textarea validate"
+                    minlength="10" maxlength="300" required></textarea>
+                    <label for="tip_img">Photo - Please provide a link to a photo of the tip</label>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix cyan-text"></i>
+                    <input type="text" id="tip_date" name="tip_date" class="datepicker validate" required>
+                    <label for="tip_date">Today's Date</label>
+                </div>
+            </div>
+            
         </form>
     </div>
 
