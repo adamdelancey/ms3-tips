@@ -1,12 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for tip in tips %}
-            {{ tip.tip_name }}<br>
-            {{ tip.category_name }}<br>
-            {{ tip.tip_short }}<br>
-            {{ tip.tip_img }}<br>          
 
+   
+<div class="row">
+    {% for tip in tips %}
+    
+    <div class="col s12 m4">
+        
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{tip.tip_img}}">                    
+                </div>
+                <div class="card-content">
+                    <p class="uppercase">{{tip.category_name}}</p>
+                    <p><strong>{{ tip.tip_name }}</strong></p>
+                    <p>{{ tip.tip_short }}</p>
+                </div>
+                <div class="card-action">
+                    <p><em>Added on {{tip.tip_date}}</em></p>
+                </div>
+            </div>
+        
+    </div>
     {% endfor %}
+</div>
 
 {% endblock %}

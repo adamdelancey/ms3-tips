@@ -25,17 +25,17 @@ def index():
 
 @app.route("/tips")
 def tips():
-    tips = mongo.db.tips.find()
+    tips = list(mongo.db.tips.find())
     return render_template("tips.html", tips=tips)
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        #check if username already exists in database
+        # check if username already exists in database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
