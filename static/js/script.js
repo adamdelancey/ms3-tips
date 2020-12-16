@@ -1,5 +1,6 @@
   $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
+    $('select').formSelect();
     $('.datepicker').datepicker({
         format: "dd mmm yyyy",
         yearRange: 0,
