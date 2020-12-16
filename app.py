@@ -41,7 +41,8 @@ def register():
             return redirect(url_for("register"))
 
         register = {
-            "username": request.form.get("username").lower(), 
+            "username": request.form.get(
+                "username").lower(), 
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
@@ -60,12 +61,14 @@ def login():
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
+                existing_user["password"], request.form.get(
+                    "password")):
+                    session["user"] = request.form.get(
+                        "username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
                     return redirect(url_for(
@@ -75,7 +78,7 @@ def login():
                 # invalid password match
                 flash("Incorrect username and/or password")
                 return redirect(url_for("login"))
-        
+
         else:
             # username doesn't exist
             flash("Incorrect username and/or password")
@@ -120,7 +123,7 @@ def add_tip():
         flash("Tip Successfully Added")
         return redirect(url_for(
             "profile", username=session["user"]))
-    
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_tip.html", categories=categories)
 
