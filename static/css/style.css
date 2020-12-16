@@ -6,3 +6,7 @@
     text-transform: uppercase;
 }
 
+.card-image img{
+    height: 30vh;
+    object-fit: cover;
+}
