@@ -104,6 +104,11 @@ def logout():
     return redirect(url_for("tips"))
 
 
+@app.route("/add_tip")
+def add_tip():
+    return render_template("add_tip.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
