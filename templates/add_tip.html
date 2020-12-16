@@ -4,7 +4,8 @@
     <h3 class="cyan-text center-align">Add Task</h3>
 
     <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_tip') }}">
+            <!--Categories-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix cyan-text"></i>
@@ -17,6 +18,7 @@
                     <label for="category_name">Tip Category</label>
                 </div>
             </div>
+            <!--Tip Name-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix cyan-text"></i>
@@ -25,22 +27,25 @@
                     <label for="tip_name">Tip Name</label>
                 </div>
             </div>
+            <!--Short Description-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix cyan-text"></i>                    
                     <textarea id="tip_short" name="tip_short" class="materialize-textarea validate"
-                    minlength="10" maxlength="30" required></textarea>
+                    minlength="10" maxlength="100" required></textarea>
                     <label for="tip_short">Short Description</label>
                 </div>
-            </div>            
+            </div>  
+            <!--Full Description-->          
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix cyan-text"></i>                    
                     <textarea id="tip_long" name="tip_long" class="materialize-textarea validate"
-                    minlength="100" maxlength="300" required></textarea>
+                    minlength="100" maxlength="3000" required></textarea>
                     <label for="tip_long">Full Details - Tell Us More!</label>
                 </div>
             </div> 
+            <!--Add Image-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-camera-retro prefix cyan-text"></i>                    
@@ -49,6 +54,7 @@
                     <label for="tip_img">Photo - Please provide a link to a photo of the tip</label>
                 </div>
             </div> 
+            <!--Select Date-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix cyan-text"></i>
@@ -56,7 +62,14 @@
                     <label for="tip_date">Today's Date</label>
                 </div>
             </div>
-            
+            <!--Submit button-->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large cyan">
+                        Add Tip <i class="fas fa-plus-square right"></i>
+                    </button>
+                </div>
+            </div>
         </form>
     </div>
 

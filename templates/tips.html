@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-   
+
 <div class="row">
     {% for tip in tips %}    
     <div class="col s12 m4">        
@@ -14,7 +14,7 @@
                 <p>{{ tip.tip_short }}</p>
             </div>
             <div class="card-action">
-                <p><em>Added on {{tip.tip_date}}</em></p>
+                <p><em>Created by {{tip.created_by}} on {{tip.tip_date}}</em></p>
             </div>
         </div>        
     </div>
