@@ -25,8 +25,18 @@ def index():
 
 @app.route("/tips")
 def tips():
-    tips = list(mongo.db.tips.find())
-    return render_template("tips.html", tips=tips)
+    category = list(mongo.db.tips.find())
+    return render_template("tips.html", category=category)
+
+
+# EXPERIMENT - FILTER
+@app.route('/tips/<category_name>')
+def get_all(category_name):
+    category = list(mongo.db.tips.find({"category_name": category_name}))
+    print(category_name)
+    return render_template(
+        "tips.html", category=category, page_title=category_name)
+####
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -34,7 +44,6 @@ def search():
     query = request.form.get("query")
     tips = list(mongo.db.tips.find({"$text": {"$search": query}}))
     return render_template("tips.html", tips=tips)
-
 
 
 @app.route("/register", methods=["GET", "POST"])

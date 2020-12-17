@@ -20,25 +20,40 @@
         </div>
     </form>
 </div>
+<a href="{{ url_for('tips') }}">ALL</a>
+                 
+<a href="{{ url_for('get_all', category_name='Eat') }}">EAT</a>
 
-{% if tips|length > 0 %}
+<a href="{{ url_for('get_all', category_name='Drink') }}">DRINK</a>
+
+<a href="{{ url_for('get_all', category_name='In') }}">IN</a>
+
+<a href="{{ url_for('get_all', category_name='Out') }}">OUT</a>
+
+<a href="{{ url_for('get_all', category_name='Stay') }}">STAY</a>
+
+                    
+
+{% if category|length > 0 %}
+
 <div class="row">
-    {% for tip in tips %}    
+    {% for cat in category %}    
     <div class="col s12 m4">        
-        <div class="card">
+        <div class="card">            
             <div class="card-image">
-                <img src="{{tip.tip_img}}">                    
+                <img src="{{cat.tip_img}}">                    
             </div>
+            
             <div class="card-content">
-                <p class="uppercase">{{tip.category_name}}</p>
-                <p><strong>{{ tip.tip_name }}</strong></p>
-                <p>{{ tip.tip_short }}</p>
+                <p class="uppercase">{{cat.category_name}}</p>
+                <p><strong>{{ cat.tip_name }}</strong></p>
+                <p>{{ cat.tip_short }}</p>
             </div>
             <div class="card-action">
-            {% if tip.created_by|lower == "admin"|lower %}
-                <p><em>Edited by {{tip.created_by}} on {{tip.tip_date}}</em></p> 
+            {% if cat.created_by|lower == "admin"|lower %}
+                <p><em>Edited by {{cat.created_by}} on {{cat.tip_date}}</em></p> 
             {% else %}
-                <p><em>Created by {{tip.created_by}} on {{tip.tip_date}}</em></p> 
+                <p><em>Created by {{cat.created_by}} on {{cat.tip_date}}</em></p> 
             {% endif %}                  
             </div>   
                           
