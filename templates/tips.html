@@ -14,8 +14,13 @@
                 <p>{{ tip.tip_short }}</p>
             </div>
             <div class="card-action">
-                <p><em>Created by {{tip.created_by}} on {{tip.tip_date}}</em></p>
+                <p><em>Created by {{tip.created_by}} on {{tip.tip_date}}</em></p>                
             </div>
+            <div class="card-button center-align">                
+                <a href="{{ url_for('edit_tip', tip_id=tip._id) }}" class="btn-small cyan">Edit</a>                
+                <a href="" class="btn-small red">Delete</a>
+            </div>          
+            
         </div>        
     </div>
     {% endfor %}
