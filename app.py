@@ -29,15 +29,20 @@ def tips():
     return render_template("tips.html", category=category)
 
 
-# EXPERIMENT - FILTER
 @app.route('/tips/<category_name>')
-def get_all(category_name):
+def filter_tips(category_name):
     category = list(mongo.db.tips.find({"category_name": category_name}))
     print(category_name)
     return render_template(
         "tips.html", category=category, page_title=category_name)
-####
 
+
+## individual tip page
+@app.route('/tip/<tip_id>')
+def tip_page(tip_id):
+    category = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
+    return render_template("tip.html", category=category)
+    
 
 @app.route("/search", methods=["GET", "POST"])
 def search():

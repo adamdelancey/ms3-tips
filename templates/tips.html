@@ -22,15 +22,15 @@
 </div>
 <a href="{{ url_for('tips') }}">ALL</a>
                  
-<a href="{{ url_for('get_all', category_name='Eat') }}">EAT</a>
+<a href="{{ url_for('filter_tips', category_name='Eat') }}">EAT</a>
 
-<a href="{{ url_for('get_all', category_name='Drink') }}">DRINK</a>
+<a href="{{ url_for('filter_tips', category_name='Drink') }}">DRINK</a>
 
-<a href="{{ url_for('get_all', category_name='In') }}">IN</a>
+<a href="{{ url_for('filter_tips', category_name='In') }}">IN</a>
 
-<a href="{{ url_for('get_all', category_name='Out') }}">OUT</a>
+<a href="{{ url_for('filter_tips', category_name='Out') }}">OUT</a>
 
-<a href="{{ url_for('get_all', category_name='Stay') }}">STAY</a>
+<a href="{{ url_for('filter_tips', category_name='Stay') }}">STAY</a>
 
                     
 
@@ -41,7 +41,9 @@
     <div class="col s12 m4">        
         <div class="card">            
             <div class="card-image">
-                <img src="{{cat.tip_img}}">                    
+                <a href="{{url_for('tip_page', tip_id=cat._id)}}">
+                <img src="{{cat.tip_img}}">   
+                </a>                 
             </div>
             
             <div class="card-content">
