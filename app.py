@@ -89,9 +89,13 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    
     # get session user's usernamae from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+
+    tips = list(mongo.db.tips.find())
+    return render_template("profile.html", tips=tips)
 
     if session["user"]:
         return render_template("profile.html", username=username)
@@ -130,8 +134,22 @@ def add_tip():
 
 @app.route("/edit_tip/<tip_id>", methods=["GET", "POST"])
 def edit_tip(tip_id):
-    tip = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "tip_name": request.form.get("tip_name"),
+            "tip_short": request.form.get("tip_short"),
+            "tip_long": request.form.get("tip_long"),
+            "tip_img": request.form.get("tip_img"),
+            "tip_date": request.form.get("tip_date"),
+            "created_by": session["user"],
+        }
+        mongo.db.tips.update({"_id": ObjectId(tip_id)}, submit)
+        flash("Tip Successfully Updated")
+        return redirect(url_for(
+            "profile", username=session["user"]))
 
+    tip = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_tip.html", tip=tip, categories=categories)
 
