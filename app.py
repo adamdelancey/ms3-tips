@@ -42,13 +42,13 @@ def filter_tips(category_name):
 def tip_page(tip_id):
     category = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
     return render_template("tip.html", category=category)
-    
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    tips = list(mongo.db.tips.find({"$text": {"$search": query}}))
-    return render_template("tips.html", tips=tips)
+    category = list(mongo.db.tips.find({"$text": {"$search": query}}))
+    return render_template("tips.html", category=category)
 
 
 @app.route("/register", methods=["GET", "POST"])
