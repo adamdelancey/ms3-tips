@@ -29,6 +29,14 @@ def tips():
     return render_template("tips.html", tips=tips)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    tips = list(mongo.db.tips.find({"$text": {"$search": query}}))
+    return render_template("tips.html", tips=tips)
+
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
