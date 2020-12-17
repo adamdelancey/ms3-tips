@@ -42,7 +42,7 @@ def register():
 
         register = {
             "username": request.form.get(
-                "username").lower(), 
+                "username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
@@ -67,7 +67,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get(
                     "password")):
-                    session["user"] = request.form.get(
+                    session["user"]=request.form.get(
                         "username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -88,7 +88,7 @@ def login():
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+def profile(username):    
     
     # get session user's usernamae from db
     username = mongo.db.users.find_one(
@@ -101,7 +101,7 @@ def profile(username):
         return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
-
+  
 
 @app.route("/logout")
 def logout():
@@ -160,6 +160,12 @@ def delete_tip(tip_id):
     flash("Tip Successfully Deleted")
     return redirect(url_for(
             "profile", username=session["user"]))
+
+
+@app.route("/manage_all")
+def manage_all():
+    all_tips = list(mongo.db.tips.find().sort("category_name", 1))
+    return render_template("manage_all.html", all_tips=all_tips)
 
 
 if __name__ == "__main__":
