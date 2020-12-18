@@ -1,6 +1,7 @@
-.flashes h4{
-    line-height: 2;
+main{
+    margin: 0;
 }
+
 
 .uppercase{
     text-transform: uppercase;
@@ -9,4 +10,22 @@
 .card-image img{
     height: 30vh;
     object-fit: cover;
+}
+
+.tips-hero {
+	text-align: center;
+	height: 60vh;
+	background-image: url(../images/stockholm-hero.jpg);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	color: black;
+}
+
+.tips-hero h1{
+    margin: 0;
+    padding-top: 20vh;
 }
