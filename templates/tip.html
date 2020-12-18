@@ -1,33 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-       
-    <div class="col s12 m4">        
-        <div class="card">            
-            <div class="card-image">
-                
-                <img src="{{category.tip_img}}">   
-                               
-            </div>
-            
-            <div class="card-content">
-                <p class="uppercase">{{category.category_name}}</p>
-                <p><strong>{{ category.tip_name }}</strong></p>
-                <p>{{ category.tip_short }}</p>
-            </div>
-            <div class="card-action">
-            {% if created_by|lower == "admin"|lower %}
-                <p><em>Edited by {{category.created_by}} on {{category.tip_date}}</em></p> 
-            {% else %}
-                <p><em>Created by {{category.created_by}} on {{category.tip_date}}</em></p> 
-            {% endif %}                  
-            </div>                          
-            
-        </div>  
-            
+<div class="row tip-card">       
+    <div class="col s12 m6">       
+        <img src="{{category.tip_img}}">   
     </div>
-
+    <div class="col s12 m6 center-align">  
+        <p class="uppercase btn cyan">{{category.category_name}}</p>      
+        <h4><strong>{{ category.tip_name }}</strong></h4>
+        
+        <p>{{ category.tip_long }}</p>   
+        {% if created_by|lower == "admin"|lower %}
+            <p><em>Edited by {{category.created_by}} on {{category.tip_date}}</em></p> 
+        {% else %}
+            <p><em>Created by {{category.created_by}} on {{category.tip_date}}</em></p> 
+        {% endif %}                  
+    </div>                      
 </div>
 
 
