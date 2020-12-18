@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-            <h3 class="center-align cyan-text">
-                {{ session.user }}'s Profile
-            </h3> 
-        </div>
+<div class="row profile-hero">
+    <div class="col s12 m8 offset-m2">        
+            <h2 class="center-align white-text">
+                Welcome, {{ session.user }}!
+            </h2>         
     </div>
 </div>
 
-<h2 class="center-align">Your Tips:</h2>
+<h3 class="center-align">Your Tips:</h3>
 
+<div class="container profile-tips">
 <div class="row">
     {% for tip in tips %}   
     {% if session.user|lower == tip.created_by|lower %}   
@@ -34,7 +33,7 @@
     {% endif %}
     {% endfor %}
 </div>
-
+</div>
 
 
 

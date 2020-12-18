@@ -35,3 +35,23 @@ main{
     height: 80vh;
     object-fit: contain;
 }
+
+.profile-hero {
+	text-align: center;
+	height: 60vh;
+	background-image: url(../images/stockholm2.jpg);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.profile-hero h2{    
+    margin-top: 25vh;
+}
+
+.profile-tips a{
+    margin-bottom: 10px;
+}
