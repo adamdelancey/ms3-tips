@@ -14,7 +14,8 @@
             <p><em>Edited by {{category.created_by}} on {{category.tip_date}}</em></p> 
         {% else %}
             <p><em>Created by {{category.created_by}} on {{category.tip_date}}</em></p> 
-        {% endif %}                  
+        {% endif %}   
+        <a class="btn cyan" href="{{ url_for('tips') }}">Return to home</a>               
     </div>                      
 </div>
 
