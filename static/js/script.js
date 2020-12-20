@@ -9,6 +9,8 @@
             done: "Select"
         }
     });
+    $('.modal').modal();
+
 
   validateMaterializeSelect();
     function validateMaterializeSelect() {
@@ -37,4 +39,6 @@
             }
         });
     }
+    
+
 });
