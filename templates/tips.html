@@ -13,29 +13,30 @@
         <p>We look forward to seeing your best tips!</p>        
     </div>
 </div>
-
-<div class="browse-section">
-    <div class="row">
-        <div class="col s12">
-            <h2 class="center-align">Browse by:</h2>
-        </div>
-    </div>
+<div class="container grey">
+<hr>
 </div>
-<div class="filters center-align">
-    <div class="row">
-    
-    <a class=" " href="{{ url_for('tips') }}">ALL</a>
-                    
-    <a class="" href="{{ url_for('filter_tips', category_name='Eat') }}"><i class="fas fa-utensils"></i>EAT</a>
 
-    <a class=" " href="{{ url_for('filter_tips', category_name='Drink') }}">DRINK</a>
-    
-    
-    <a class=" " href="{{ url_for('filter_tips', category_name='In') }}">IN</a>
-
-    <a class=" " href="{{ url_for('filter_tips', category_name='Out') }}">OUT</a>
-
-    <a class=" " href="{{ url_for('filter_tips', category_name='Stay') }}">STAY</a>
+<div class="filters container center-align">
+    <div class="row"> 
+        <div class="col s2">
+            <a class="black-text " href="{{ url_for('tips') }}"><i class="fas fa-street-view"></i><br>ALL</a> 
+        </div>   
+        <div class="col s2">        
+            <a class="black-text" href="{{ url_for('filter_tips', category_name='Eat') }}"><i class="fas fa-utensils"></i><br>EAT</a>
+        </div>   
+        <div class="col s2">
+            <a class=" black-text" href="{{ url_for('filter_tips', category_name='Drink') }}"><i class="fas fa-cocktail"></i><br>DRINK</a>  
+        </div>
+        <div class="col s2">  
+            <a class="black-text " href="{{ url_for('filter_tips', category_name='In') }}"><i class="fas fa-university"></i><br>IN</a>
+        </div> 
+        <div class="col s2">
+            <a class=" black-text" href="{{ url_for('filter_tips', category_name='Out') }}"><i class="fas fa-leaf"></i><br>OUT</a>
+        </div>
+        <div class="col s2">
+            <a class="black-text " href="{{ url_for('filter_tips', category_name='Stay') }}"><i class="fas fa-hotel"></i><br>STAY</a>
+        </div>
     </div>
 
     <p>or</p>
@@ -77,12 +78,12 @@
                     </a>                 
                 </div>
                 
-                <div class="card-content">
+                <div class="card-content" style="padding-top:12px; padding-bottom:12px">
                     <p class="uppercase">{{cat.category_name}}</p>
                     <p><strong>{{ cat.tip_name }}</strong></p>
                     <p>{{ cat.tip_short }}</p>
                 </div>
-                <div class="card-action">
+                <div class="card-action" style="padding-top:0px; padding-bottom:2px">
                 {% if cat.created_by|lower == "admin"|lower %}
                     <p><em>Edited by {{cat.created_by}} on {{cat.tip_date}}</em></p> 
                 {% else %}

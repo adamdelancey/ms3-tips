@@ -2,6 +2,10 @@ main{
     margin: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 .uppercase{
     text-transform: uppercase;
@@ -56,3 +60,26 @@ main{
     margin-bottom: 10px;
 }
 
+.filters{
+    padding-top: 50px;
+}
+
+.filters i{
+    border-radius: 100%;
+    border: black solid 2px;
+    padding: 15px;
+    font-size: 200%;
+}
+
+.filters a{
+    font-size: 200%;
+}
+
+.card-action{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.card-action{
+    font-size: 12px;
+}

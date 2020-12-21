@@ -37,7 +37,7 @@ def filter_tips(category_name):
         "tips.html", category=category, page_title=category_name)
 
 
-## individual tip page
+# individual tip page
 @app.route('/tip/<tip_id>')
 def tip_page(tip_id):
     category = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
@@ -89,7 +89,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get(
                     "password")):
-                    session["user"]=request.form.get(
+                    session["user"] = request.form.get(
                         "username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -110,8 +110,8 @@ def login():
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):    
-    
+def profile(username):
+
     # get session user's usernamae from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -123,7 +123,7 @@ def profile(username):
         return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
-  
+
 
 @app.route("/logout")
 def logout():
