@@ -7,6 +7,8 @@
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     {% block styles %}
     {% endblock %}
     <title>Tips</title>
@@ -14,10 +16,10 @@
 <body>
 <header>       
     <!--top navbar-->
-        <nav class="nav-extended cyan">
+        <nav class="nav-extended white">
         <div class="nav-wrapper">
-            <a href="{{ url_for('tips') }}" class="brand-logo center">Tips</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+            <a href="{{ url_for('tips') }}" class="brand-logo center black-text">Tips</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars black-text"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('tips') }}">Home</a></li>
                 {% if session.user %}
@@ -57,7 +59,7 @@
         {% if messages %}
             {% for message in messages %}
                 <div class="row flashes">
-                    <h4 class="cyan white-text center-align">{{ message }}</h4>
+                    <h4 class=" black-text center-align">{{ message }}</h4>
                 </div>
             {% endfor %}
         {% endif %}

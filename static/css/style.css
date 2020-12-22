@@ -4,6 +4,16 @@ main{
 
 body{
     overflow-x: hidden;
+    font-family: 'Sarala', sans-serif;
+
+}
+
+nav li a{
+    color:black
+}
+
+strong{
+    font-weight: 700;
 }
 
 
@@ -75,6 +85,19 @@ body{
     font-size: 200%;
 }
 
+@media only screen and (max-width: 600px) {
+  .filters i{    
+    border: black solid 2px;
+    padding: 15px;
+    font-size: 100%;
+    }
+
+    .filters a{
+    font-size: 100%;
+    }
+}
+
+
 .card-action{
     padding-top: 0px;
     padding-bottom: 0px;
@@ -82,4 +105,12 @@ body{
 
 .card-action{
     font-size: 12px;
+}
+
+.add-tip-btn{
+    margin-bottom: 15px;
+}
+
+.hidden{
+    display: none;
 }

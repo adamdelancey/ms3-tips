@@ -21,8 +21,17 @@
                 <p><em>Created by {{tip.created_by}} on {{tip.tip_date}}</em></p>                
             </div>           
             <div class="card-button center-align">    
-                <a href="{{ url_for('edit_tip', tip_id=tip._id) }}" class="btn-small cyan">Edit</a>                
-                <a href="{{ url_for('delete_tip', tip_id=tip._id) }}" class="btn-small red">Delete</a>                
+                <a href="{{ url_for('edit_tip', tip_id=tip._id) }}" class="btn-small white black-text">Edit</a>                
+                <a href="#modal2" class="btn-small black white-text modal-trigger">Delete</a>          
+
+            <!-- Modal Structure -->
+            <div id="modal2" class="modal">
+                <div class="modal-content center-align">
+                    <h4>Are you sure? </h4>                  
+                    <a href="{{ url_for('delete_tip', tip_id=tip._id) }}" class="modal-close waves-effect waves-green btn-small white black-text">Yes</a>
+                    <a href="{{ url_for('manage_all') }}" class="modal-close waves-effect waves-green btn-small black white-text">No</a>
+                </div>
+            </div>                 
             </div>     
         </div>        
     </div>

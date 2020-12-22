@@ -10,6 +10,7 @@
         }
     });
     $('.modal').modal();
+   
 
 
   validateMaterializeSelect();
