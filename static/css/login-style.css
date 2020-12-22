@@ -11,6 +11,10 @@ body {
     color: black;
 }
 
+footer{
+    display: none;
+}
+
 h3{
     margin: 0;
 }

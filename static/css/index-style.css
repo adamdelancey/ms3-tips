@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-nav{
+nav, footer{
     display: none;
 }
 
@@ -95,7 +95,7 @@ body{
 }
 
 @keyframes example2 {
-    100% {color: white; background: black;}
+    100% {color: white; background: #212121;}
 }
 
 @media(max-width: 960px){

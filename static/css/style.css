@@ -5,11 +5,12 @@ main{
 body{
     overflow-x: hidden;
     font-family: 'Sarala', sans-serif;
+    background: #eeeeee 
 
 }
 
 nav li a{
-    color:black
+    color:white
 }
 
 strong{
@@ -88,7 +89,7 @@ strong{
 @media only screen and (max-width: 600px) {
   .filters i{    
     border: black solid 2px;
-    padding: 15px;
+    padding: 10px;
     font-size: 100%;
     }
 
@@ -111,6 +112,21 @@ strong{
     margin-bottom: 15px;
 }
 
-.hidden{
-    display: none;
+.created-by{
+    padding: 25px;
+    font-size: 200%;
+    color: white;
+}
+
+
+.social-icons i {
+	padding: 25px;
+    font-size: 200%;
+    color: white;
+}
+
+@media screen and (max-width:600px) {
+	.social-icons i {
+		padding: 25px 5px;
+	}
 }

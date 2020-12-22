@@ -84,8 +84,6 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     4. Be able to comfortably navigate throughout the site between my own tips and other users'.
     5. Get an instant first-impression that this is a professional, modern and up-to-date site with good UX.
 
-
-
 -   #### Frequent User Goals
 
     As a Frequent User, I want to:
@@ -94,6 +92,11 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     3. Add more tips to the website that I may not have done already.
     4. Edit my own tips.
     5. Delete any tips that are no longer relevant.
+
+-   #### Admin Goals
+
+    As Admin, I want to:
+    1. Be able to create, read, update and delete all tips on the site.
 
 ## Scope
 

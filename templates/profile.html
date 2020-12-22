@@ -7,6 +7,9 @@
             </h2>         
     </div>
 </div>
+<div class="add-tip-btn center-align">
+    <a class="btn-large white black-text" href="{{ url_for('add_tip') }}">Add a tip</a>
+</div>
 
 <h3 class="center-align">Your Tips:</h3>
 
@@ -14,12 +17,15 @@
 <div class="row">
     {% for tip in tips %}   
     {% if session.user|lower == tip.created_by|lower %}
+      
        
     <div class="col s12 m4">        
         <div class="card">
-            <div class="card-image">
-                <img src="{{tip.tip_img}}">                    
-            </div>
+             <div class="card-image">
+                    <a href="{{url_for('tip_page', tip_id=tip._id)}}">
+                    <img src="{{tip.tip_img}}">   
+                    </a>                 
+                </div>
             <div class="card-content">
                 <p class="uppercase">{{tip.category_name}}</p>
                 <p><strong>{{ tip.tip_name }}</strong></p>
@@ -27,7 +33,7 @@
             </div>           
             <div class="card-button center-align">    
                 <a href="{{ url_for('edit_tip', tip_id=tip._id) }}" class="btn-small white black-text">Edit</a> 
-                <a href="#modal1" class="btn-small black white-text modal-trigger">Delete</a>              
+                <a href="#modal1" class="btn-small grey darken-4 white-text modal-trigger">Delete</a>              
                            
                          
             
@@ -36,8 +42,8 @@
             <div id="modal1" class="modal">
                 <div class="modal-content center-align">
                     <h4>Are you sure? </h4>                  
-                    <a href="{{ url_for('delete_tip', tip_id=tip._id) }}" class="modal-close waves-effect waves-green btn-small white black-text">Yes</a>
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close waves-effect waves-green btn-small black white-text">No</a>
+                    <a href="{{ url_for('delete_tip', tip_id=tip._id) }}" class="modal-close waves-effect waves-green btn-small white black-text ">Yes</a>
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close waves-effect waves-green btn-small grey darken-4 white-text">No</a>
                 </div>
             </div>  
             </div>  
@@ -47,9 +53,7 @@
     {% endfor %}
 </div>
 </div>
-<div class="add-tip-btn center-align">
-    <a class="btn-large white black-text" href="{{ url_for('add_tip') }}">Add a tip</a>
-</div>
+
 
 
 

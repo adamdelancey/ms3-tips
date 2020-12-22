@@ -6,7 +6,7 @@
         <img src="{{category.tip_img}}">   
     </div>
     <div class="col s12 l6 center-align">  
-        <p class="uppercase btn cyan">{{category.category_name}}</p>      
+        <p class="uppercase btn grey darken-4">{{category.category_name}}</p>      
         <h4><strong>{{ category.tip_name }}</strong></h4>
         
         <p>{{ category.tip_long }}</p>   
@@ -15,7 +15,7 @@
         {% else %}
             <p><em>Created by {{category.created_by}} on {{category.tip_date}}</em></p> 
         {% endif %}   
-        <a class="btn cyan" href="{{ url_for('tips') }}">Return to home</a>               
+        <a class="btn grey darken-4" href="{{ url_for('tips') }}">Return to home</a>               
     </div>                      
 </div>
 
