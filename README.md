@@ -11,7 +11,7 @@ responsive and accessible on a range of devices, making it interactive and easy 
 
 # Access
 
-View the project live: [here](https://adamdelancey.github.io/ms3-tips/)
+View the project live: [here](https://ms3-tips.herokuapp.com/)
 
 View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 
@@ -102,7 +102,8 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 
 ### Current features
 
-* Opening Page 
+* Opening Page
+    - v
 
 
 * Navbar
