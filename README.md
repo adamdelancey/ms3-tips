@@ -233,15 +233,23 @@ Full wireframes can be accessed here:
 -   #### Icons
     -   The icons used throughout the site are taken from [Font Awesome](https://fontawesome.com/).
 
+# Information Architecture
+
+MongoDB Atlas is used for storing data for this web site.
+
+Current schema:
+A txt version can be viewed [here](documentation/data/data.txt)
+
+<p><img src="documentation/screenshots/data.jpg"></p>
+
+
+For the needs of this website I did need to use other data types in MongoDB.
+
 # Accessibility
 
 ## Alt Tags
 
 In order to ensure that all images are accessible for those using a screen reader, I have ensured that all images used throughout the site include alt tags.
-
-## Forms
-
-The forms on the site used in the modals of "Contact Us" and "Enquire Now" have aria-labels so that screen readers can read out what is the required input in the necessary fields.
 
 # Technologies used
 
@@ -256,30 +264,42 @@ The forms on the site used in the modals of "Contact Us" and "Enquire Now" have 
 
 
 1. [MongoDB](https://www.mongodb.com/1)
-    - MongoDB was used....
+    - MongoDB was used to host the data used on the site and was chosen due to the non-relational nature of the data.
 1. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-    - Flask was used...
+    - The Flask framework was used to import the Flask, flash, render_template, redirect, request, session, and url_for 
+    functions that are used throughout the site.
+1. [BSon](http://bsonspec.org/)
+    - This was imported in order to access the data used across the site.
+1. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+    - This was imported in order for the password control to enhance security on the site.
+1. [Jinja Templating](https://jinja.palletsprojects.com/en/2.11.x/templates/)   
+    - This was used predominantly for the with, for loops and if statements in order to display all of the relevant data.
 1. [JQuery](https://jquery.com/)
-    - I have used JQuery for some JS functions, particularly ones that use event listeners such as for the see more/less buttons 
-    on the homepage and the filtering of properties by number of bedrooms.
-1. [Bootstrap 4.5.2:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website, such as the navbar, carousels and cards features.
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Roboto' font which is used on all pages throughout the project.
-1. [Font Awesome:](https://fontawesome.com/)
+    - I have used JQuery predominantly to initialise the components used in the Materialize framework. In addition, I used 
+    code taken from the Data Centric Development Module with the Code Institute in order to ensure that the category names are 
+    a required attribute.
+1. [Materialize 1.0.0](https://materializecss.com/)
+    - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars for desktop and 
+    mobile, buttons, forms, cards and colours.
+1. [Google Fonts](https://fonts.google.com/)
+    - Google fonts were used to import the 'Sarala' font which is used on all pages throughout the project.
+1. [Font Awesome](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes. 
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
+1. [GitHub](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-1. [Balsamiq:](https://balsamiq.com/)
+1. [Heroku](https://dashboard.heroku.com/apps)
+    - Heroku is used for the hosting of the site and is deployed through here.
+1. [Balsamic](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
 
 # Testing
 
 ## Validation
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup and CSS Validator Services, JSHint and Python Validator were used to validate every page of the project 
+to ensure there were no syntax errors in the project.
 
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadamdelancey.github.io%2Fms2-ashtreeestates%2Findex.html)
     This same result appears across every page of the site.
@@ -290,7 +310,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [JSHint](https://jshint.com/) - 
     <p> <img src="documentation/screenshots/jshint.jpg"></p>      
 -   [Python Validator](http://pep8online.com/)
-
     
 
 ## Autoprefixer CSS Online

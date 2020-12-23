@@ -1,0 +1,27 @@
+Tips Collection
+
+"tips":{
+    "_id": "ObjectId()"    
+    "category_name": "<string>",
+    "tip_name": "<string>",
+    "tip_short": "<string>",
+    "tip_long": "<string>",
+    "tip_img": "<string>",
+    "tip_date": "<string>",
+    "created_by": "<string>", 
+}
+
+Categories Collection
+
+"categories":{
+    "_id": "ObjectId()"
+    "category_name": "<string>",
+}
+
+Users Collection
+
+"users":{
+    "_id": "ObjectId()"
+    "username": "<string>",    
+    "password": "<string>",
+}
