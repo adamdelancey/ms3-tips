@@ -301,15 +301,19 @@ In order to ensure that all images are accessible for those using a screen reade
 The W3C Markup and CSS Validator Services, JSHint and Python Validator were used to validate every page of the project 
 to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadamdelancey.github.io%2Fms2-ashtreeestates%2Findex.html)
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fms3-tips.herokuapp.com%2F)
     This same result appears across every page of the site.
     <p> <img src="documentation/screenshots/html-checks.jpg">  </p> 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fadamdelancey.github.io%2Fms2-ashtreeestates%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) -  
-    There are 2 property issues found when checking the site. However, these are being validated from the Bootstrap CDN link and therefore out of my control.
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-tips.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) -  
+    There is 1 property issue found when checking the site. However, these are being validated from the Materialize 
+    link and therefore out of my control.
     <p> <img src="documentation/screenshots/css-validator.jpg">  </p> 
 -   [JSHint](https://jshint.com/) - 
+    No issues were found on this check.
     <p> <img src="documentation/screenshots/jshint.jpg"></p>      
 -   [Python Validator](http://pep8online.com/)
+    No issues were found on this check.
+    <p> <img src="documentation/screenshots/pep8.jpg"></p>   
     
 
 ## Autoprefixer CSS Online
