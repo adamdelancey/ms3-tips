@@ -103,25 +103,63 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 ### Current features
 
 * Opening Page
-    - v
+    - Video background showing off Stockholm, using free video footage from [Pexels](https://www.pexels.com/video/timelapse-of-stockholm-at-night-852395/).
+    I believe this gives a modern and professional first impression on the user.
+    - Fading in text and buttons to enter the site. Acting in sync with the video mentioned above, this adds to the modern
+    first impression and should make users excited to see more of the site.
+    - This page hides the navbar and footer in order to keep the page to fit to the total size of the viewing window.
 
-
-* Navbar
-  
+* Base HTML - on all pages
+    - Navbar (Desktop) - an easy to use, modern design and minimal options to help the user navigate throughout the site 
+    at all time. Using an if statement, the navbar changes whether the user is logged in or out, or is an admin.
+    - Navbar (Mobile) - using Materialize, the mobile navbar is a slide option that is triggered by the hamburger icon 
+    in the fixed navbar. This adds to the user experience and allows for easier navigation on mobile.
+    - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each 
+    time the user interacts with the site by logging in or registering, logging out, adding a tip, editing a tip, and deleting a tip.
+    - Footer - Simple social media icons to learn more about the company. As this is a fictional site and there are no actual 
+    social media accounts, to the links simply go to the homepages on an external link in order for the user to still 
+    stay in the Tips site.  
 
 * Landing Page
+    - Filter icons to see the different categories of Tips that are on offer - Eat, Drink, In, Out, Stay, and then an option 
+    for All to see all options. These are labelled with a large icon to continue with the modern style and the filters allow 
+    the user to see only the tips that they want to see.
+    - Search bar - similarly, in order to improve user experience, there is a search bar that searches for either the name or 
+    description of the Tip, in order for the user to find the desired Tip sooner. There is also then the option to 
+    'reset' the page for if the user wants to return to seeing all the options.
+    - Cards - by using the jinja templated for loop, each individual Tip is displayed within a Materialize card 
+    feature, making it easy to see the image, category, name and short description. The picture can then be clicked on as 
+    a link to find out more information about the Tip. Additionally, using the sort method in Python, the most recent 
+    and therefore most likely relevant Tip is displayed first.
 
+
+* Tip Page
+    - A simple layout featuring a large image of the Tip, the category name, tip name, long description and the details of the 
+    user that added or edited the tip. In addition there is a 'return to home' button which acts as an additional navigation 
+    option for ease of use.     
 
 * Login/Register Page 
-
+    - A simple card design for each, with a form to add in the desired username and password. The username and password must be 
+    alphanumerical and be of a length between 5 and 15 characters.
 
 * Profile Page
+    - Instead of a flash message, the user is welcomed by a message which includes their username over the background of an image 
+    of Stockholm.
+    - A button to 'Add a Tip' allowing quick user access to add an additional Tip of their choice.
+    - Features the Tips that the user has already added. For these cards, in contrast to the cards on the landing page, the user 
+    is able to read, update and delete the tip if they choose.
+    - As part of defensive programming, the delete button is followed by a modal which asks the user if they are sure that they 
+    want to delete the tip, in order to avoid any accidental deletions. 
 
+* Add/Edit Tip Page
+    - These both have a similar design in order to create a new tip or update an existing tip. Each entry into the form uses the 
+    required attribute, and some have min and max values to ensure that the layout remains consistent. As well as text 
+    entries, there is a date selection function to choose the date that the tip has been added, and extra JQuery has been added to ensure 
+    that the category name is not left blank.
 
-* Add Tip Page
-
-
-* Update Page 
+* Manage All Page
+    - For the Admin user only, there is a Manage All button in the Navbar where the user is able to read, update and delete all Tips 
+    added by any user
   
 
 ### Long-term goals
@@ -131,16 +169,14 @@ Future improvements to the website may include:
 * Be able to add reviews to other user's tips and then allow the website to order user suggestions from best to worst.
 * Expanding the website to be used across more cities around the world.
 * Include a paid service so that hotels or experiences companies can advertise their business on the site.
+* Pagination could be included to the Tips page in the case of many users adding their Tips to the site.
 
 
 ## Structure
 
-* 1
-* 2
-* 3
-* 4
-* 5
-
+* I made the decision to have the site split into clear sections rather than one page. For all users, different pages for the home, 
+tips, login and register page. For a logged in user, the Profile and Edit tip page, and for the Admin, additionally the Manage All 
+page. Each page has the same navbar and the adjusting Navbar to ensure consistency and ease of use across the site.
 
 
 ## Skeleton
@@ -179,19 +215,23 @@ Full wireframes can be accessed here:
 ### Design
 -   #### Colour Scheme
     <p><img src="documentation/screenshots/colors.jpg"></p>
-    -   XXXX
+    -   I have used a simple, clean and chromatic design for the colours used in the project. The black is mainly used for 
+    the text, while the dark-grey colour (as featured in Materialize) is used for the navbar, buttons and footer. In contract, the 
+    off-white "cultured" colour is used for the background on all pages in order for the photos and cards to be lifted forward. Due to the 
+    images from the tips being colourful, I believe this simple design compliments this well.
 
 -   #### Typography
-    -   XXXX
+    -   The Sarala font is the main font used throughout the whole website with Sans Serif as the fallback font in case 
+    for any reason the font isn't being imported into the site correctly. I chose this as I believe it has a modern feel and 
+    reflects the style of the remainder of the site. 
 
 -   #### Imagery
-    -   XXXX   
+    - The hero images and background images were all taken from [Pexels](https://www.pexels.com/). The images for the tips 
+    are added via a link by the user. 
     - All photos were put through [Tiny PNG](https://tinypng.com/) to reduce the file size and improve loading time.
 
-
 -   #### Icons
-    -   Contact icons used in the footer and contact page, as well as in the description for each property have been taken 
-     from [Font Awesome](https://fontawesome.com/).
+    -   The icons used throughout the site are taken from [Font Awesome](https://fontawesome.com/).
 
 # Accessibility
 

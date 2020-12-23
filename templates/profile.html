@@ -16,14 +16,13 @@
 <div class="container profile-tips">
 <div class="row">
     {% for tip in tips %}   
-    {% if session.user|lower == tip.created_by|lower %}
-      
+    {% if session.user|lower == tip.created_by|lower %}      
        
     <div class="col s12 m4">        
         <div class="card">
              <div class="card-image">
                     <a href="{{url_for('tip_page', tip_id=tip._id)}}">
-                    <img src="{{tip.tip_img}}">   
+                    <img src="{{tip.tip_img}}" alt="{{tip.tip_name}}">   
                     </a>                 
                 </div>
             <div class="card-content">

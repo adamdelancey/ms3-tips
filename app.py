@@ -25,7 +25,7 @@ def index():
 
 @app.route("/tips")
 def tips():
-    category = list(mongo.db.tips.find())
+    category = list(mongo.db.tips.find().sort("tip_date", -1))
     return render_template("tips.html", category=category)
 
 
