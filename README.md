@@ -83,24 +83,24 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     As a First Time Visitor, I want to:
 
     1. Quickly understand the service being provided by Tips and how I can interact with the service.
-    2. Be able to easily browse the various 'tips' in Stockholm and find something that interests me.
-    3. Be able to register to the website and add my own 'tips'.
-    4. Be able to comfortably navigate throughout the site between my own tips and other users'.
+    2. Be able to easily browse the various 'Tips' in Stockholm and find something that interests me.
+    3. Be able to register to the website and add my own 'Tips'.
+    4. Be able to comfortably navigate throughout the site between my own Tips and other users'.
     5. Get an instant first-impression that this is a professional, modern and up-to-date site with good UX.
 
 -   #### Frequent User Goals
 
     As a Frequent User, I want to:
-    1. Easily be able to check if any new tips have been added that may interest me.
+    1. Easily be able to check if any new Tips have been added that may interest me.
     2. Login to the account that I have previously set up and see my own submissions.
-    3. Add more tips to the website that I may not have done already.
-    4. Edit my own tips.
-    5. Delete any tips that are no longer relevant.
+    3. Add more Tips to the website that I may not have done already.
+    4. Edit my own Tips.
+    5. Delete any Tips that are no longer relevant.
 
 -   #### Admin Goals
 
     As Admin, I want to:
-    1. Be able to create, read, update and delete all tips on the site.
+    1. Be able to create, read, update and delete all Tips on the site.
 
 ## Scope
 
@@ -119,7 +119,7 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     - Navbar (Mobile) - using Materialize, the mobile navbar is a slide option that is triggered by the hamburger icon 
     in the fixed navbar. This adds to the user experience and allows for easier navigation on mobile.
     - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each 
-    time the user interacts with the site by logging in, registering, logging out, adding a tip, editing a tip, and deleting a tip.
+    time the user interacts with the site by logging in, registering, logging out, adding a Tip, editing a Tip, and deleting a Tip.
     - Footer - Simple social media icons to learn more about the company. As this is a fictional site and there are no actual 
     social media accounts, the links simply go to the homepages on an external link in order for the user to still 
     stay in the Tips site.  
@@ -127,7 +127,7 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 * Landing Page
     - Filter icons to see the different categories of Tips that are on offer - Eat, Drink, In, Out, Stay, and then an option 
     for All to see all options. These are labelled with large icons to continue with the modern style and the filters allow 
-    the user to see only the tips that they want to see.
+    the user to see only the Tips that they want to see.
     - Search bar - similarly, in order to improve user experience, there is a search bar that searches for either the name or 
     description of the Tip, in order for the user to find the desired Tip sooner. There is also then the option to 
     'reset' the page for if the user wants to return to seeing all the options.
@@ -137,8 +137,8 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     and therefore most likely relevant Tip is displayed first.
 
 * Tip Page
-    - A simple layout featuring a large image of the Tip, the category name, tip name, long description and the details of the 
-    user that added or edited the tip. In addition, there is a 'return to home' button which acts as an additional navigation 
+    - A simple layout featuring a large image of the Tip, the category name, Tip name, long description and the details of the 
+    user that added or edited the Tip. In addition, there is a 'return to home' button which acts as an additional navigation 
     option for ease of use.     
 
 * Login/Register Page 
@@ -150,14 +150,14 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     of Stockholm.
     - A button to 'Add a Tip' allowing quick user access to add an additional Tip of their choice.
     - Features the Tips that the user has already added. For these cards, in contrast to the cards on the landing page, the user 
-    is able to read, update and delete the tip if they choose.
+    is able to read, update and delete the Tip if they choose.
     - As part of defensive programming, the delete button is followed by a modal which asks the user if they are sure that they 
-    want to delete the tip, in order to avoid any accidental deletions. 
+    want to delete the Tip, in order to avoid any accidental deletions. 
 
 * Add/Edit Tip Page
-    - These both have a similar design in order to create a new tip or update an existing tip. Each entry into the form uses the 
+    - These both have a similar design in order to create a new Tip or update an existing Tip. Each entry into the form uses the 
     required attribute, and some have min and max values to ensure that the layout remains consistent. As well as text 
-    entries, there is a date selection function to choose the date that the tip has been added, and extra JQuery has been added to ensure 
+    entries, there is a date selection function to choose the date that the Tip has been added, and extra JQuery has been added to ensure 
     that the category name is not left blank.
 
 * Manage All Page
@@ -169,7 +169,7 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 
 Future improvements to the website may include:
 
-* Be able to add reviews to other user's tips and then allow the website to order user suggestions from best to worst.
+* Be able to add reviews to other user's Tips and then allow the website to order user suggestions from best to worst.
 * Expanding the website to be used across more cities around the world.
 * Include a paid service so that hotels or experiences companies can advertise their business on the site.
 * Pagination could be included to the Tips page in the case of many users adding their Tips to the site.
@@ -178,7 +178,7 @@ Future improvements to the website may include:
 ## Structure
 
 * I made the decision to have the site split into clear sections rather than one page. For all users, different pages for the home, 
-tips, login and register page. For a logged in user, the Profile and Edit tip page, and for the Admin, additionally the Manage All 
+Tips, login and register page. For a logged in user, the Profile and Edit Tip page, and for the Admin, additionally the Manage All 
 page. Each page has the same footer and the adjusting Navbar to ensure consistency and ease of use across the site.
 
 
@@ -221,7 +221,7 @@ Full wireframes can be accessed here:
     -   I have used a simple, clean and chromatic design for the colours used in the project. The black is mainly used for 
     the text, while the dark-grey colour (as featured in Materialize) is used for the navbar, buttons and footer. In contract, the 
     off-white "cultured" colour is used for the background on all pages in order for the photos and cards to be lifted forward. Due to the 
-    images from the tips being colourful, I believe this simple design compliments this well.
+    images from the Tips being colourful, I believe this simple design compliments this well.
 
 -   #### Typography
     -   The Sarala font is the main font used throughout the whole website with Sans Serif as the fallback font in case 
@@ -229,7 +229,7 @@ Full wireframes can be accessed here:
     reflects the style of the remainder of the site. 
 
 -   #### Imagery
-    - The hero images and background images were all taken from [Pexels](https://www.pexels.com/). The images for the tips 
+    - The hero images and background images were all taken from [Pexels](https://www.pexels.com/). The images for the Tips 
     are added via a link by the user. 
     - All photos were put through [Tiny PNG](https://tinypng.com/) to reduce the file size and improve loading time.
 
@@ -333,7 +333,7 @@ Mobile<img src="documentation/screenshots/lighthouse-mobile.jpg"></p>
 
 From Chrome Developer Tools, this Lighthouse score is based on the homepage while being viewed on desktop and mobile. The 
 biggest variant throughout the site is the performance score, which is predominantly due to the image link added by users 
-to the site for each individual tip, making it quite hard to control. 
+to the site for each individual Tip, making it quite hard to control. 
 
 
 ## Testing User Stories from User Experience Section
@@ -345,17 +345,17 @@ to the site for each individual tip, making it quite hard to control.
         What the Locals Do.' Next, on the Tips landing page, there is a short description which tells the user exactly what the website 
         is about and how they can interact. In addition, the dynamic and easy to understand navbar helps the user to interact easily.*
 
-    2. Be able to easily browse the various 'tips' in Stockholm and find something that interests me.
+    2. Be able to easily browse the various 'Tips' in Stockholm and find something that interests me.
         - *As you can see below, large icon buttons are presented to users to be able to filter their results immediately into the main 
         categories of eat, drink, in, out and stay. Additionally, there is a search bar to help the user find the desired result*
         <p><img src="documentation/screenshots/filters.jpg"></p>
 
-    3. Be able to register to the website and add my own 'tips'.
+    3. Be able to register to the website and add my own 'Tips'.
         - *Upon entering the landing page, the user is able to either login to an existing account or register to the website. From here, 
-        they are redirected to their own profile page, where they can add their own tips, as well as edit and delete existing ones.*
-    4. Be able to comfortably navigate throughout the site between my own tips and other users'.
-        - *On the initial page, it is only possible to view all the tips. However, on the profile page, the user is presented with the 
-        tips that they have added under 'Your Tips.' From here, there is the additional feature on the cards of edit and delete.*
+        they are redirected to their own profile page, where they can add their own Tips, as well as edit and delete existing ones.*
+    4. Be able to comfortably navigate throughout the site between my own Tips and other users'.
+        - *On the initial page, it is only possible to view all the Tips. However, on the profile page, the user is presented with the 
+        Tips that they have added under 'Your Tips.' From here, there is the additional feature on the cards of edit and delete.*
         <p><img src="documentation/screenshots/your-tips.jpg"></p>
     5. Get an instant first-impression that this is a professional, modern and up-to-date site with good UX.
         - *By adding the short full-screen video on the page that is first loaded, I believe that this creates the desired effect.*
@@ -363,27 +363,27 @@ to the site for each individual tip, making it quite hard to control.
 
 -   #### Frequent User Goals - I want to:
 
-    1. Easily be able to check if any new tips have been added that may interest me.
-        - *The main tips landing page, as well as the filtered pages, are all sorted by the order of which they were added to the site. 
-        Therefore, any new tip that the user has not seen before will be viewed at the top of the page immediately, making them easy to find.*
+    1. Easily be able to check if any new Tips have been added that may interest me.
+        - *The main Tips landing page, as well as the filtered pages, are all sorted by the order of which they were added to the site. 
+        Therefore, any new Tip that the user has not seen before will be viewed at the top of the page immediately, making them easy to find.*
     2. Login to the account that I had previously set up and see my own submissions.
         - *On the same page, on the navbar, there is the option to login, which redirects the user to their own profile page where they can 
-        see the tips that they have previously submitted.*
-    3. Add more tips to the website that I may not have done already.
+        see the Tips that they have previously submitted.*
+    3. Add more Tips to the website that I may not have done already.
         - *On their profile page, there is an 'Add A Tip' button near the top of the page, which allows the user to add their own. *
-    4. Edit my own tips.
-        - *As mentioned previously, on the user's profile page there is an edit button where they can edit their own tip.*
-    5. Delete any tips that are no longer relevant.
-        - *Similarly, they can delete their own tips. With defensive programming in mind, if the user clicks delete then a modal appears 
-        asking the user if they are sure that they want to delete the tip, which will then permanently remove it.*
+    4. Edit my own Tips.
+        - *As mentioned previously, on the user's profile page there is an edit button where they can edit their own Tip.*
+    5. Delete any Tips that are no longer relevant.
+        - *Similarly, they can delete their own Tips. With defensive programming in mind, if the user clicks delete then a modal appears 
+        asking the user if they are sure that they want to delete the Tip, which will then permanently remove it.*
         <p><img src="documentation/screenshots/modal.jpg"></p>
 
 
 -   #### Admin Goals - I want to:
    
-    1. Be able to create, read, update and delete all tips on the site.
+    1. Be able to create, read, update and delete all Tips on the site.
         - *If the admin logs into their 'admin' account, then they have a new option in the navbar - Manage All. This allows the user to 
-        see all of the available tips and edit and delete them as their choosing. Using jinja templating, I have ensured that this page 
+        see all of the available Tips and edit and delete them as their choosing. Using jinja templating, I have ensured that this page 
         is only available to view if the user is logged in as the admin, therefore avoiding other users forcing their way onto the page. 
         If not, the following error appears:* 
         <p><img src="documentation/screenshots/access-denied.jpg"></p>
@@ -397,16 +397,16 @@ to the site for each individual tip, making it quite hard to control.
 ## Fixed Bugs
 After deployment, I found multiple bugs that needed addressing:
 
-1. When deleting a tip using the modal feature, the site deleted the first tip in the list, as opposed to the one that was clicked on.
+1. When deleting a Tip using the modal feature, the site deleted the first Tip in the list, as opposed to the one that was clicked on.
     - *Having recognised that when using the for loops for the modal, the ID is always the same, I amended the ID to read "modal{{loop.index}}". 
-    This ensures that the correct tip is deleted.*
+    This ensures that the correct Tip is deleted.*
 2.  When clicking the different filter buttons, the page loads to the top each time, which is quite annoying for the user. 
     - *I amended the href to "{{ url_for('tips') }}#list" and added the same #list id to that div. This works much better for 
     functionality.*  
 3.  My filter_tips function in app.py was not working successfully. The function was printing the correct category names from the database, 
 but it wasn't loading the correct items properly. 
     - *Having realised the problem must be on the front end, I realised that the issue was that I was using a different variable name 
-    in my filter_tips function compared to the tips function. I therefore then amended the names of the loops on the HTML page to category, to match 
+    in my filter_tips function compared to the Tips function. I therefore then amended the names of the loops on the HTML page to category, to match 
     both variables, and it worked.*
 
 
@@ -539,7 +539,7 @@ Again, make sure to enter your own SECRET_KEY, and MONGO_URL.
 
 # Disclaimer
 
-I do not own any of the photos or text written for the individual tips. Please contact me immediately in case of any
+I do not own any of the photos or text written for the individual Tips. Please contact me immediately in case of any
 copyright issue and I will happily remove anything.
 
 This project is for educational purposes only.
@@ -547,5 +547,5 @@ This project is for educational purposes only.
 # Acknowledgements
 
 - My mentor, Aaron Sinnott, for his support and mentorship during the project.
-- The peer-code-review channel on Slack and their trusty channel leads for both code and design tips.
+- The peer-code-review channel on Slack and their trusty channel leads for both code and design Tips.
 - Friends and family for testing the site on their various devices.
