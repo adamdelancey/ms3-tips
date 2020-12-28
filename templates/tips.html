@@ -1,104 +1,89 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="tips-hero">
-</div>
-
+<div class="tips-hero"></div>
 <div class="row">
-    <div class="col s12 m6 offset-m3 center-align">
-        <h1>Welcome to Tips, Stockholm!</h1>
-        <p>Here you'll find the very best places to eat, drink, explore and stay in the city, for locals and tourists alike! Find your new cosy cafe, cocktail with a view, swim spot
-            in the city, or discover your new favourite place to stay when you visit.</p>
-        <p>Explore the suggestions below, or add your own tips by registering or logging in to the site.</p>
-        <p>We look forward to seeing your best tips!</p>        
-    </div>
+   <div class="col s12 m6 offset-m3 center-align">
+      <h1>Welcome to Tips, Stockholm!</h1>
+      <p>Here you'll find the very best places to eat, drink, explore and stay in the city, for locals and tourists alike! Find your new cosy cafe, cocktail with a view, swim spot
+         in the city, or discover your new favourite place to stay when you visit.
+      </p>
+      <p>Explore the suggestions below, or add your own tips by registering or logging in to the site.</p>
+      <p>We look forward to seeing your best tips!</p>
+   </div>
 </div>
 <div class="container">
-<hr>
+   <hr>
 </div>
-
 <div class="filters container center-align" id="list">
-    <div class="row"> 
-        <div class="col s2">
-            <a class="black-text " href="{{ url_for('tips') }}#list"><i class="fas fa-street-view"></i><br>ALL</a> 
-        </div>   
-        <div class="col s2">        
-            <a class="black-text" href="{{ url_for('filter_tips', category_name='Eat') }}#list"><i class="fas fa-utensils"></i><br>EAT</a>
-        </div>   
-        <div class="col s2">
-            <a class=" black-text" href="{{ url_for('filter_tips', category_name='Drink') }}#list"><i class="fas fa-cocktail"></i><br>DRINK</a>  
-        </div>
-        <div class="col s2">  
-            <a class="black-text " href="{{ url_for('filter_tips', category_name='In') }}#list"><i class="fas fa-university"></i><br>IN</a>
-        </div> 
-        <div class="col s2">
-            <a class=" black-text" href="{{ url_for('filter_tips', category_name='Out') }}#list"><i class="fas fa-leaf"></i><br>OUT</a>
-        </div>
-        <div class="col s2">
-            <a class="black-text " href="{{ url_for('filter_tips', category_name='Stay') }}#list"><i class="fas fa-hotel"></i><br>STAY</a>
-        </div>
-    </div>
-
-    
+   <div class="row">
+      <div class="col s2">
+         <a class="black-text " href="{{ url_for('tips') }}#list"><i class="fas fa-street-view"></i><br>ALL</a> 
+      </div>
+      <div class="col s2">        
+         <a class="black-text" href="{{ url_for('filter_tips', category_name='Eat') }}#list"><i class="fas fa-utensils"></i><br>EAT</a>
+      </div>
+      <div class="col s2">
+         <a class=" black-text" href="{{ url_for('filter_tips', category_name='Drink') }}#list"><i class="fas fa-cocktail"></i><br>DRINK</a>  
+      </div>
+      <div class="col s2">  
+         <a class="black-text " href="{{ url_for('filter_tips', category_name='In') }}#list"><i class="fas fa-university"></i><br>IN</a>
+      </div>
+      <div class="col s2">
+         <a class=" black-text" href="{{ url_for('filter_tips', category_name='Out') }}#list"><i class="fas fa-leaf"></i><br>OUT</a>
+      </div>
+      <div class="col s2">
+         <a class="black-text " href="{{ url_for('filter_tips', category_name='Stay') }}#list"><i class="fas fa-hotel"></i><br>STAY</a>
+      </div>
+   </div>
 </div>
-
 <div>
-    <form action="{{ url_for('search') }}" method="post">
-        <div class="row">
-            <div class="input-field col s12 m4 offset-m4 center-align ">
-                <i class="fas fa-search prefix"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search Tips</label> 
-                               
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col s12 m6 offset-m3 center-align">
-                <button type="submit" class="white black-text  btn">
-                    <i class="fas fa-search left"></i>Search
-                </button>
-                <a href="{{ url_for('tips')}}" class="grey darken-4 white-text btn">Reset</a>
-                
-            </div>
-        </div>
-        
-    </form>
+   <form action="{{ url_for('search') }}" method="post">
+      <div class="row">
+         <div class="input-field col s12 m4 offset-m4 center-align ">
+            <i class="fas fa-search prefix"></i>
+            <input type="text" name="query" id="query" minlength="3" class="validate" required>
+            <label for="query">Search Tips</label> 
+         </div>
+      </div>
+      <div class="row">
+         <div class="col s12 m6 offset-m3 center-align">
+            <button type="submit" class="white black-text  btn">
+            <i class="fas fa-search left"></i>Search
+            </button>
+            <a href="{{ url_for('tips')}}" class="grey darken-4 white-text btn">Reset</a>
+         </div>
+      </div>
+   </form>
 </div>
-
-                    
-
 {% if category|length > 0 %}
 <div class="container" >
-    <div class="row">
-        {% for cat in category %}    
-        <div class="col s12 m4">        
-            <div class="card">            
-                <div class="card-image">
-                    <a href="{{url_for('tip_page', tip_id=cat._id)}}">
-                    <img src="{{cat.tip_img}}" alt="{{cat.tip_name}}">   
-                    </a>                 
-                </div>
-                
-                <div class="card-content" style="padding-top:12px; padding-bottom:12px">
-                    <p class="uppercase">{{cat.category_name}}</p>
-                    <p><strong>{{ cat.tip_name }}</strong></p>
-                    <p>{{ cat.tip_short }}</p>
-                </div>
-                <div class="card-action" style="padding-top:0px; padding-bottom:2px">
-                {% if cat.created_by|lower == "admin"|lower %}
-                    <p><em>Edited by {{cat.created_by}} on {{cat.tip_date}}</em></p> 
-                {% else %}
-                    <p><em>Created by {{cat.created_by}} on {{cat.tip_date}}</em></p> 
-                {% endif %}                  
-                </div>                             
-            </div>        
-        </div>
-        {% endfor %}
-    </div>
+   <div class="row">
+      {% for cat in category %}    
+      <div class="col s12 m4">
+         <div class="card">
+            <div class="card-image">
+               <a href="{{url_for('tip_page', tip_id=cat._id)}}">
+               <img src="{{cat.tip_img}}" alt="{{cat.tip_name}}">   
+               </a>                 
+            </div>
+            <div class="card-content" style="padding-top:12px; padding-bottom:12px">
+               <p class="uppercase">{{cat.category_name}}</p>
+               <p><strong>{{ cat.tip_name }}</strong></p>
+               <p>{{ cat.tip_short }}</p>
+            </div>
+            <div class="card-action" style="padding-top:0px; padding-bottom:2px">
+               {% if cat.created_by|lower == "admin"|lower %}
+               <p><em>Edited by {{cat.created_by}} on {{cat.tip_date}}</em></p>
+               {% else %}
+               <p><em>Created by {{cat.created_by}} on {{cat.tip_date}}</em></p>
+               {% endif %}                  
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
 </div>
 {% else %}
-    <h3 class="red-text center-align">No results found!</h3>
+<h3 class="red-text center-align">No results found!</h3>
 {% endif %}
-
 {% endblock %}
