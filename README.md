@@ -22,15 +22,18 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
         - [Business Objectives](#business-objectives)
         - [User Stories](#user-stories)
             - [First Time Visitor Goals](#first-time-visitor-goals)
-            - [Frequent User  Goals](#frequent-user-goals)
+            - [Frequent User Goals](#frequent-user-goals)
+            - [Admin Goals](#admin-goals)
     - [Scope](#scope)
         - [Current Features](#current-features)
-            - [Navbar](#navbar)
-            - [Back to top Button](#back-to-top-button)
-            - [Home Page](#home-page)
-            - [Property Landing Page](#property-landing-page)
-            - [Property Listing Page](#property-listing-page)
-            - [Contact Page](#contact-page)
+            - [Opening Page](#opening-page)
+            - [Base HTML](#base-HTML)
+            - [Landing Page](#landing-page)
+            - [Tip Page](#tip-page)
+            - [Login/Register Page](#login/register-page)
+            - [Profile Page](#profile-page)
+            - [Add/Edit Tip Page](#add/edit-tip-page)
+            - [Manage All Page](#manage-all-page)
         - [Long-term goals](#long-term-goals)
     - [Structure](#structure)
     - [Skeleton](#skeleton)
@@ -41,9 +44,9 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
             - [Typography](#typography)
             - [Imagery](#imagery)
             - [Icons](#icons)
+- [Information Architecture](#information-architecture) 
 - [Accessibility](#accessibility)
     - [Alt Tags](#alt-tags)
-    - [Forms](#forms)
 - [Technologies used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries & Programs Used](#frameworks-libraries-&-programs-used)
@@ -51,14 +54,14 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     - [Validation](#validation)
     - [Autoprefixer CSS Online](#autoprefixer-css-online)
     - [Lighthouse](#lighthouse)
-    - [EmailJS API](#emailjs-api)
     - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
     - [Fixed Bugs](#fixed-bugs)
     - [Further Testing](#further-testing)
 - [Deployment](#deployment)
+     - [Cloning Tips from GitHub](#cloning-tips-from-GitHub)
+     - [Deploying Tips to Heroku](#deploying-tips-to-Heroku)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
-
 
 # UX
 
@@ -525,12 +528,10 @@ SECRET_KEY|YOUR_SECRET_KEY
 
 # Credits
 
-- All professional images have been sourced from a combination of [Unsplash](https://unsplash.com/s/photos/bristol) and [Pixabay](https://pixabay.com/).
-- All photos related to the properties have been sourced from Ash Tree Estates.
-- The Navbar, Forms, Carousels and Cards have been chosen from Bootstrap templates and adapted using CSS.
-- Initial instructions for setting up the Google Maps API were taken from the relevant lesson from the [Code Institute](https://codeinstitute.net/).
-- Similarly, setting up the EmailJS API was also taken from the relevant lesson from the [Code Institute](https://codeinstitute.net/).
-- Instructions for setting up the getNearbyPlaces function was taken from the [Google Codelabs Developer lessons](https://codelabs.developers.google.com/codelabs/google-maps-nearby-search-js#1)
+- All professional images have been sourced from [Pixabay](https://pixabay.com/).
+- The video on entry to the site is from [Pexels](https://www.pexels.com/video/timelapse-of-stockholm-at-night-852395/).
+- The Navbar, Forms and Cards have been chosen from Materialize templates and adapted using CSS.
+- Initial instructions for setting up the site were taken from the Task Manager walkthrough from the [Code Institute](https://codeinstitute.net/).
 - [Stack Overflow](https://stackoverflow.com/) and [W3C Schools](https://www.w3schools.com/) were used for occasional debugging or issues where I could not initially work out the solution myself.
 - Fonts are from [Google Fonts](https://fonts.google.com/) and icons from [Font Awesome](https://fontawesome.com/).
 
