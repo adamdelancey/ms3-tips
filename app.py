@@ -33,7 +33,6 @@ def tips():
 def filter_tips(category_name):
     category = list(mongo.db.tips.find({
         "category_name": category_name}).sort("tip_date", -1))
-    print(category_name)
     return render_template(
         "tips.html", category=category, page_title=category_name)
 

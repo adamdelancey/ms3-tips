@@ -54,7 +54,6 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     - [EmailJS API](#emailjs-api)
     - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
     - [Fixed Bugs](#fixed-bugs)
-    - [Known Outstanding Bugs](#known-outstanding-bugs)
     - [Further Testing](#further-testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -381,55 +380,148 @@ tip, making it quite hard to control.
         - *If the admin logs into their 'admin' account, then they have a new option in the navbar - Manage All. This allows the user to 
         see all of the available tips and edit and delete them as their choosing. Using jinja templating, I have ensured that this page 
         is only available to view if the user logged in as the admin, therefore avoiding other users forcing their way onto the page. 
-        If not, the following error appears:*  
+        If not, the following error appears:* 
         <p><img src="documentation/screenshots/access-denied.jpg"></p>
+
+        *Addionally, once edited, every user will then know that the tip has been amended by the admin to reflect that the most 
+        updated version was created by the admin, not the user. This then appears as:*
+        <p><img src="documentation/screenshots/admin-tip.jpg"></p>
+
 
 
 ## Fixed Bugs
 After deployment, I found multiple bugs that needed addressing:
 
-1. Bug 1
-    - *Solution 1*
-2.  Bug 2
-    - *Solution 2*  
-3.  Bug 3
-    - *Solution 3*
+1. When deleting a tip using the modal feature, the site deleted the first tip in the list, as opposed to the one that was clicked on.
+    - *Having recognised that when using the for loops for the modal, the ID is always the same, I amended the ID to read "modal{{loop.index}}". 
+    This ensures that the correct tip is deleted.*
+2.  When clicking the different filter buttons, the page loads to the top each time, which is quite annoying for the user. 
+    - *I amended the href to "{{ url_for('tips') }}#list" and added the same #list id to that div. This works much better for 
+    functionality.*  
+3.  My filter_tips function in app.py was not working succesfully. The function was printing the correct category names from the database, 
+but it wasn't loading the correct items properly. 
+    - *Having realised the problem must be on the front end, I realised that the issue was that I was using a different variable name 
+    in my filter_tips function compared to the tips function. I therefore then amended the loops on the HTML page to category, to match 
+    both variables, and it worked.*
 
-## Known Outstanding Bugs
 
-1. Bug 1
-    - *Solution 1*
-2.  Bug 2
-    - *Solution 2*  
-
- 
 ## Further Testing
 
-- Throughout the development process, I used the Chrome Developer Tools, specifically for using the console.log function to test 
-JavaScript code and also for the various CSS designs, particularly around responsiveness. On especially narrow devices < 300px, some images were 
-larger than the width, however I felt this had no effect on UX.
+- Each link and paticularly aspects of the CRUD functionalities have been tested across the site to ensure everything was 
+working correctly.
+- Throughout the development process, I used the Chrome Developer Tools, specifically by using the print() function to test 
+Python code, as well as for the various CSS designs, particularly around responsiveness.
 - The website has been tested on various desktop browsers such as Google Chrome, Firefox, Safari and Edge, as mentioned above, I used 
 the CSS tool Autoprefixer Online to help with this. 
-- Each link has been tested across the site to ensure everything was linked correctly.
 - Friends and family were also asked for advice particularly on layout and in order to ensure that the site was being tested across 
 various devices. 
 
 
 # Deployment
 
-The site was published in GitPages using the following steps:
-1. First, all code was written on the IDE Gitpod and was then pushed to GitHub using the 'git push' entry in the terminal, where it is now stored in [my repository](https://github.com/adamdelancey/ms2-ashtreeestates).
-2. To push the site live, under the Settings section of the repository I selected, I scrolled down to where it says 'GitHub Pages'.
-3. I then selected 'Master Branch' under Source and then the page automatically refreshed.
-4. This created the URL which can be viewed [here](https://adamdelancey.github.io/ms2-ashtreeestates/index.html).
-5. The site was then found by scrolling back to the "GitHub Pages" section where you can see the following:
-<p><img src="documentation/screenshots/githubpages.jpg"></p>
+Tips was developed using GitPod, using Git and GitHub to host the repository.
 
+## Cloning Tips from GitHub ##
 
+Ensure you have the following installed:
 
-To access the code, it can be run locally through a download or cloned.
+- [PIP](https://pypi.org/project/pip/)
+- [Python 3](https://www.python.org/)
+- [Git](https://git-scm.com/)
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-Initially, I used "git commit" and "git push" for every major change, then at later stages used these functions when de-bugging or making minor editing changes to ensure the live version was the most recent version, as well as to avoid losing any work.
+In addition, create an account on [MongoDB](https://www.mongodb.com/) in order to create the database.
+
+1. Clone the repository by either downloading from [source](https://github.com/adamdelancey/ms3-tips), or if you have Git installed 
+typing the following command into your terminal:
+
+```bash
+git clone https://github.com/adamdelancey/ms3-tips
+```
+
+2. Navigate to this folder in your terminal window and install the required modules to run the application using the following command:
+
+```bash
+python -m pip -r requirements.txt
+```
+
+3. Initialise the virtual environment by typing the following command into the terminal:
+
+```
+py -m venv virtual
+```
+
+4. In MongoDB, create a new database called *tips* with three collections: categories, tips and users.
+
+5. Back in GitPod create a file to hold your environment variables and call it env.py.
+
+6. Your env.py file should contain the following:
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
+os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
+os.environ.setdefault("DEBUG", "1")
+```
+
+- Make make sure you update your the secret keys and passwords.
+
+- Before pushing the project to a public repository, add your env.py file to .gitignore.
+
+7. You can now run your application locally by typing the following command into your terminal:
+
+```
+python run.py
+```
+
+## Deploying Tips to Heroku ##
+
+1. Log in to Heroku and click create new app.
+
+2. Create a requirements.txt file using the following command in GitPod:
+
+```
+pip3 freeze --local > requirements.txt
+```
+
+3. Create a Procfile with the following command:
+
+```
+echo web: python run.py > Procfile
+```
+
+4. Push these newly created files to your repository master.
+
+5. Add heroku remote to your git repository by getting the heroku git URL from the heroku account settings. Then type the following: 
+
+```
+git remote add heroku https://git.heroku.com/xxxxx
+```
+
+6. Push the page to your heroku account:
+
+```
+git push heroku master
+```
+
+7. In your heroku app, set the following variables:
+
+Key|Value
+:-----:|:-----:
+HOSTNAME|0.0.0.0
+PORT|5000
+MONGO_URI|YOUR_MONGODB_URI
+SECRET_KEY|YOUR_SECRET_KEY
+
+  ** Please make sure you enter your own *SECRET_KEY*, and *MONGO_URL*.
+
+8. Click the deploy button on the Heroku dashboard.
+9. The site has been deployed to Heroku.
+
 
 # Credits
 
