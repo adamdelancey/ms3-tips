@@ -2,8 +2,9 @@
 
 [View the live project here.](https://adamdelancey.github.io/ms3-tips/)
 
-As my submission for the Code Institute Milestone Project 3, this Tips website is a site where users can create, read, update and delete suggestion of things to do in Stockholm,
-for example where to eat and drink, in order to create a database of ideas that locals and tourists can use to maximise their experience in the city. It is designed to be 
+As my submission for the Code Institute Milestone Project 3, this Tips website is a site where users can create, read, 
+update and delete suggestions of things to do in Stockholm, for example where to eat and drink, in order to create a 
+database of ideas that locals and tourists can use to maximise their experience in the city. It is designed to be 
 responsive and accessible on a range of devices, making it interactive and easy to navigate for potential users.
 
 <p align="center">
@@ -61,6 +62,7 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
      - [Cloning Tips from GitHub](#cloning-tips-from-GitHub)
      - [Deploying Tips to Heroku](#deploying-tips-to-Heroku)
 - [Credits](#credits)
+- [Disclaimer](#disclaimer)
 - [Acknowledgements](#acknowledgements)
 
 # UX
@@ -90,7 +92,7 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 
     As a Frequent User, I want to:
     1. Easily be able to check if any new tips have been added that may interest me.
-    2. Login to the account that I had previously set up and see my own submissions.
+    2. Login to the account that I have previously set up and see my own submissions.
     3. Add more tips to the website that I may not have done already.
     4. Edit my own tips.
     5. Delete any tips that are no longer relevant.
@@ -106,25 +108,25 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 
 * Opening Page
     - Video background showing off Stockholm, using free video footage from [Pexels](https://www.pexels.com/video/timelapse-of-stockholm-at-night-852395/).
-    I believe this gives a modern and professional first impression on the user.
+    I believe this gives a modern and professional first impression to the user.
     - Fading in text and buttons to enter the site. Acting in sync with the video mentioned above, this adds to the modern
     first impression and should make users excited to see more of the site.
     - This page hides the navbar and footer in order to keep the page to fit to the total size of the viewing window.
 
 * Base HTML - on all pages
     - Navbar (Desktop) - an easy to use, modern design and minimal options to help the user navigate throughout the site 
-    at all time. Using an if statement, the navbar changes whether the user is logged in or out, or is an admin.
+    at all times. Using an if statement, the navbar changes whether the user is logged in or out, or is an admin.
     - Navbar (Mobile) - using Materialize, the mobile navbar is a slide option that is triggered by the hamburger icon 
     in the fixed navbar. This adds to the user experience and allows for easier navigation on mobile.
     - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each 
-    time the user interacts with the site by logging in or registering, logging out, adding a tip, editing a tip, and deleting a tip.
+    time the user interacts with the site by logging in, registering, logging out, adding a tip, editing a tip, and deleting a tip.
     - Footer - Simple social media icons to learn more about the company. As this is a fictional site and there are no actual 
-    social media accounts, to the links simply go to the homepages on an external link in order for the user to still 
+    social media accounts, the links simply go to the homepages on an external link in order for the user to still 
     stay in the Tips site.  
 
 * Landing Page
     - Filter icons to see the different categories of Tips that are on offer - Eat, Drink, In, Out, Stay, and then an option 
-    for All to see all options. These are labelled with a large icon to continue with the modern style and the filters allow 
+    for All to see all options. These are labelled with large icons to continue with the modern style and the filters allow 
     the user to see only the tips that they want to see.
     - Search bar - similarly, in order to improve user experience, there is a search bar that searches for either the name or 
     description of the Tip, in order for the user to find the desired Tip sooner. There is also then the option to 
@@ -133,7 +135,6 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
     feature, making it easy to see the image, category, name and short description. The picture can then be clicked on as 
     a link to find out more information about the Tip. Additionally, using the sort method in Python, the most recent 
     and therefore most likely relevant Tip is displayed first.
-
 
 * Tip Page
     - A simple layout featuring a large image of the Tip, the category name, tip name, long description and the details of the 
@@ -178,7 +179,7 @@ Future improvements to the website may include:
 
 * I made the decision to have the site split into clear sections rather than one page. For all users, different pages for the home, 
 tips, login and register page. For a logged in user, the Profile and Edit tip page, and for the Admin, additionally the Manage All 
-page. Each page has the same navbar and the adjusting Navbar to ensure consistency and ease of use across the site.
+page. Each page has the same footer and the adjusting Navbar to ensure consistency and ease of use across the site.
 
 
 ## Skeleton
@@ -237,7 +238,7 @@ Full wireframes can be accessed here:
 
 # Information Architecture
 
-MongoDB Atlas is used for storing data for this web site.
+MongoDB Atlas is used for storing data for this website.
 
 Current schema:
 A txt version can be viewed [here](documentation/data/data.txt)
@@ -245,13 +246,14 @@ A txt version can be viewed [here](documentation/data/data.txt)
 <p><img src="documentation/screenshots/data.jpg"></p>
 
 
-For the needs of this website I did need to use other data types in MongoDB.
+For the needs of this website I did not need to use other data types in MongoDB.
 
 # Accessibility
 
 ## Alt Tags
 
-In order to ensure that all images are accessible for those using a screen reader, I have ensured that all images used throughout the site include alt tags.
+In order to ensure that all images are accessible for those using a screen reader, I have ensured that all images used 
+throughout the site include alt tags.
 
 # Technologies used
 
@@ -329,9 +331,9 @@ browsers. I have added the below header to my CSS styles sheet in order to show 
 <p >Desktop<img src="documentation/screenshots/lighthouse.jpg">
 Mobile<img src="documentation/screenshots/lighthouse-mobile.jpg"></p>
 
-From Chrome Developer Tools, this Lighthouse score is based on the homepage while being viewed on desktop and mobile. The biggest variant
-throughout the site is the performance score, which is predominantly due to the image link added by users to the site for each individual 
-tip, making it quite hard to control. 
+From Chrome Developer Tools, this Lighthouse score is based on the homepage while being viewed on desktop and mobile. The 
+biggest variant throughout the site is the performance score, which is predominantly due to the image link added by users 
+to the site for each individual tip, making it quite hard to control. 
 
 
 ## Testing User Stories from User Experience Section
@@ -339,12 +341,12 @@ tip, making it quite hard to control.
 -   #### First Time Visitor Goals - I want to:
 
     1. Quickly understand the service being provided by Tips and how I can interact with the service.
-        - *Upon loading the page, the user presented with a short looped video on Stockholm, as well as the simple page slogan of 'Do 
+        - *Upon loading the page, the user is presented with a short looped video of Stockholm, as well as the simple page slogan of 'Do 
         What the Locals Do.' Next, on the Tips landing page, there is a short description which tells the user exactly what the website 
         is about and how they can interact. In addition, the dynamic and easy to understand navbar helps the user to interact easily.*
 
     2. Be able to easily browse the various 'tips' in Stockholm and find something that interests me.
-        - *As you can see below, large icon buttons are presented to user to be able to filter their results immediately into the main 
+        - *As you can see below, large icon buttons are presented to users to be able to filter their results immediately into the main 
         categories of eat, drink, in, out and stay. Additionally, there is a search bar to help the user find the desired result*
         <p><img src="documentation/screenshots/filters.jpg"></p>
 
@@ -353,7 +355,7 @@ tip, making it quite hard to control.
         they are redirected to their own profile page, where they can add their own tips, as well as edit and delete existing ones.*
     4. Be able to comfortably navigate throughout the site between my own tips and other users'.
         - *On the initial page, it is only possible to view all the tips. However, on the profile page, the user is presented with the 
-        tips that they have added under 'Your Tips.' From here, there is the additional feature on the cards of edit and delete*
+        tips that they have added under 'Your Tips.' From here, there is the additional feature on the cards of edit and delete.*
         <p><img src="documentation/screenshots/your-tips.jpg"></p>
     5. Get an instant first-impression that this is a professional, modern and up-to-date site with good UX.
         - *By adding the short full-screen video on the page that is first loaded, I believe that this creates the desired effect.*
@@ -362,13 +364,13 @@ tip, making it quite hard to control.
 -   #### Frequent User Goals - I want to:
 
     1. Easily be able to check if any new tips have been added that may interest me.
-        - *The main tips landing page, as well as the filtered pages, or all sorted by the order of which they were added to the site. 
+        - *The main tips landing page, as well as the filtered pages, are all sorted by the order of which they were added to the site. 
         Therefore, any new tip that the user has not seen before will be viewed at the top of the page immediately, making them easy to find.*
     2. Login to the account that I had previously set up and see my own submissions.
         - *On the same page, on the navbar, there is the option to login, which redirects the user to their own profile page where they can 
         see the tips that they have previously submitted.*
     3. Add more tips to the website that I may not have done already.
-        - *On their profile page, there is an 'Add A Tip' button near the tip of the page, which allows the user to add their own. *
+        - *On their profile page, there is an 'Add A Tip' button near the top of the page, which allows the user to add their own. *
     4. Edit my own tips.
         - *As mentioned previously, on the user's profile page there is an edit button where they can edit their own tip.*
     5. Delete any tips that are no longer relevant.
@@ -382,12 +384,12 @@ tip, making it quite hard to control.
     1. Be able to create, read, update and delete all tips on the site.
         - *If the admin logs into their 'admin' account, then they have a new option in the navbar - Manage All. This allows the user to 
         see all of the available tips and edit and delete them as their choosing. Using jinja templating, I have ensured that this page 
-        is only available to view if the user logged in as the admin, therefore avoiding other users forcing their way onto the page. 
+        is only available to view if the user is logged in as the admin, therefore avoiding other users forcing their way onto the page. 
         If not, the following error appears:* 
         <p><img src="documentation/screenshots/access-denied.jpg"></p>
 
         *Additionally, once edited, every user will then know that the tip has been amended by the admin to reflect that the most 
-        updated version was created by the admin, not the user. This then appears as:*
+        updated version was edited by the admin, not created by the user. This then appears as:*
         <p><img src="documentation/screenshots/admin-tip.jpg"></p>
 
 
@@ -404,7 +406,7 @@ After deployment, I found multiple bugs that needed addressing:
 3.  My filter_tips function in app.py was not working successfully. The function was printing the correct category names from the database, 
 but it wasn't loading the correct items properly. 
     - *Having realised the problem must be on the front end, I realised that the issue was that I was using a different variable name 
-    in my filter_tips function compared to the tips function. I therefore then amended the loops on the HTML page to category, to match 
+    in my filter_tips function compared to the tips function. I therefore then amended the names of the loops on the HTML page to category, to match 
     both variables, and it worked.*
 
 
@@ -435,8 +437,8 @@ Ensure you have the following installed:
 
 In addition, create an account on [MongoDB](https://www.mongodb.com/) in order to create the database.
 
-1. Clone the repository by either downloading from [source](https://github.com/adamdelancey/ms3-tips), or if you have Git installed 
-typing the following command into your terminal:
+1. Clone the repository by either downloading from [my GitHub Page](https://github.com/adamdelancey/ms3-tips), or if you
+already have Git installed, by typing the following command into your terminal:
 
 ```bash
 git clone https://github.com/adamdelancey/ms3-tips
@@ -454,7 +456,7 @@ python -m pip -r requirements.txt
 py -m venv virtual
 ```
 
-4. In MongoDB, create a new database called *tips* with three collections: categories, tips and users.
+4. In MongoDB, create a new database called tips with three collections: categories, tips and users.
 
 5. Back in GitPod create a file to hold your environment variables and call it env.py.
 
@@ -468,7 +470,6 @@ os.environ.setdefault("PORT", "5000")
 os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
 os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
 os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
-os.environ.setdefault("DEBUG", "1")
 ```
 
 - Make sure you update the secret keys and passwords.
@@ -499,7 +500,8 @@ echo web: python run.py > Procfile
 
 4. Push these newly created files to your repository master.
 
-5. Add heroku remote to your git repository by getting the heroku git URL from the heroku account settings. Then type the following: 
+5. Add heroku remote to your git repository by getting the heroku git URL from the heroku account settings. Then type the
+following: 
 
 ```
 git remote add heroku https://git.heroku.com/xxxxx
@@ -520,7 +522,7 @@ PORT|5000
 MONGO_URI|YOUR_MONGODB_URI
 SECRET_KEY|YOUR_SECRET_KEY
 
-  ** Please make sure you enter your own *SECRET_KEY*, and *MONGO_URL*.
+Again, make sure to enter your own SECRET_KEY, and MONGO_URL.
 
 8. Click the deploy button on the Heroku dashboard.
 9. The site has been deployed to Heroku.
@@ -530,11 +532,17 @@ SECRET_KEY|YOUR_SECRET_KEY
 
 - All professional images have been sourced from [Pixabay](https://pixabay.com/).
 - The video on entry to the site is from [Pexels](https://www.pexels.com/video/timelapse-of-stockholm-at-night-852395/).
-- The Navbar, Forms and Cards have been chosen from Materialize templates and adapted using CSS.
+- The Navbar, Forms and Cards have been selected from Materialize templates and adapted using CSS.
 - Initial instructions for setting up the site were taken from the Task Manager walkthrough from the [Code Institute](https://codeinstitute.net/).
 - [Stack Overflow](https://stackoverflow.com/) and [W3C Schools](https://www.w3schools.com/) were used for occasional debugging or issues where I could not initially work out the solution myself.
 - Fonts are from [Google Fonts](https://fonts.google.com/) and icons from [Font Awesome](https://fontawesome.com/).
 
+# Disclaimer
+
+I do not own any of the photos or text written for the individual tips. Please contact me immediately in case of any
+copyright issue and I will happily remove anything.
+
+This project is for educational purposes only.
 
 # Acknowledgements
 
