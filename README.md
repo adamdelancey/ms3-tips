@@ -3,7 +3,7 @@
 [View the live project here.](https://adamdelancey.github.io/ms3-tips/)
 
 As my submission for the Code Institute Milestone Project 3, this Tips website is a site where users can create, read, update and delete suggestion of things to do in Stockholm,
-for example where to eat and drink, in order to create a database of ideas that locals and tourists can use to maximise their experience in the city.It is designed to be 
+for example where to eat and drink, in order to create a database of ideas that locals and tourists can use to maximise their experience in the city. It is designed to be 
 responsive and accessible on a range of devices, making it interactive and easy to navigate for potential users.
 
 <p align="center">
@@ -137,7 +137,7 @@ View the Github repo: [here](https://github.com/adamdelancey/ms3-tips)
 
 * Tip Page
     - A simple layout featuring a large image of the Tip, the category name, tip name, long description and the details of the 
-    user that added or edited the tip. In addition there is a 'return to home' button which acts as an additional navigation 
+    user that added or edited the tip. In addition, there is a 'return to home' button which acts as an additional navigation 
     option for ease of use.     
 
 * Login/Register Page 
@@ -339,7 +339,7 @@ tip, making it quite hard to control.
 -   #### First Time Visitor Goals - I want to:
 
     1. Quickly understand the service being provided by Tips and how I can interact with the service.
-        - *Upon loading the page the user presented with a short looped video on Stockholm, as well as the simple page slogan of 'Do 
+        - *Upon loading the page, the user presented with a short looped video on Stockholm, as well as the simple page slogan of 'Do 
         What the Locals Do.' Next, on the Tips landing page, there is a short description which tells the user exactly what the website 
         is about and how they can interact. In addition, the dynamic and easy to understand navbar helps the user to interact easily.*
 
@@ -386,7 +386,7 @@ tip, making it quite hard to control.
         If not, the following error appears:* 
         <p><img src="documentation/screenshots/access-denied.jpg"></p>
 
-        *Addionally, once edited, every user will then know that the tip has been amended by the admin to reflect that the most 
+        *Additionally, once edited, every user will then know that the tip has been amended by the admin to reflect that the most 
         updated version was created by the admin, not the user. This then appears as:*
         <p><img src="documentation/screenshots/admin-tip.jpg"></p>
 
@@ -401,7 +401,7 @@ After deployment, I found multiple bugs that needed addressing:
 2.  When clicking the different filter buttons, the page loads to the top each time, which is quite annoying for the user. 
     - *I amended the href to "{{ url_for('tips') }}#list" and added the same #list id to that div. This works much better for 
     functionality.*  
-3.  My filter_tips function in app.py was not working succesfully. The function was printing the correct category names from the database, 
+3.  My filter_tips function in app.py was not working successfully. The function was printing the correct category names from the database, 
 but it wasn't loading the correct items properly. 
     - *Having realised the problem must be on the front end, I realised that the issue was that I was using a different variable name 
     in my filter_tips function compared to the tips function. I therefore then amended the loops on the HTML page to category, to match 
@@ -410,7 +410,7 @@ but it wasn't loading the correct items properly.
 
 ## Further Testing
 
-- Each link and paticularly aspects of the CRUD functionalities have been tested across the site to ensure everything was 
+- Each link and particularly aspects of the CRUD functionalities have been tested across the site to ensure everything was 
 working correctly.
 - Throughout the development process, I used the Chrome Developer Tools, specifically by using the print() function to test 
 Python code, as well as for the various CSS designs, particularly around responsiveness.
@@ -471,7 +471,7 @@ os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
 os.environ.setdefault("DEBUG", "1")
 ```
 
-- Make make sure you update your the secret keys and passwords.
+- Make sure you update the secret keys and passwords.
 
 - Before pushing the project to a public repository, add your env.py file to .gitignore.
 
