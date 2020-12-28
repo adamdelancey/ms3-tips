@@ -5,130 +5,135 @@
 * Browsers: last 4 version
 */
 
-*{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-nav, footer{
-    display: none;
+nav,
+footer {
+	display: none;
 }
 
-body{
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-    overflow-x: hidden;
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #333;
+	overflow-x: hidden;
 }
 
-.v-header{
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    
+.v-header {
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
-.container{
-    max-width: 960px;
-    padding-left: 1rem;   
-    padding-right: 1rem;
-    margin: auto;
-    text-align: center;
+.container {
+	max-width: 960px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin: auto;
+	text-align: center;
 }
 
-
-.fullscreen-video-wrap{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.fullscreen-video-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
 }
 
-.fullscreen-video-wrap video{
-    min-width: 100%;
-    min-width: 100%;
+.fullscreen-video-wrap video {
+	min-width: 100%;
+	min-width: 100%;
 }
 
-.header-overlay{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;  
-    z-index: 1;
-    
+.header-overlay {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
-.header-content{
-    z-index: 2;
-    margin-left: auto;
-    margin-right: auto;
+.header-content {
+	z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.header-content h1{
-    font-size: 50px;
-    margin-bottom: 0;  
-    padding-bottom: 2rem;  
-    color: rgba(0,0,0,0);
-    -webkit-animation-name: example;
-            animation-name: example;  
-    -webkit-animation-duration: 4s;  
-            animation-duration: 4s;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    font-size: 3rem;
-    color: rgba(0,0,0,0);
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards  
+.header-content h1 {
+	font-size: 50px;
+	margin-bottom: 0;
+	padding-bottom: 2rem;
+	color: rgba(0, 0, 0, 0);
+	-webkit-animation-name: example;
+	animation-name: example;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	font-size: 3rem;
+	color: rgba(0, 0, 0, 0);
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards
 }
 
 @-webkit-keyframes example {
-  100% {color: white}
+	100% {
+		color: white
+	}
 }
 
 @keyframes example {
-  100% {color: white}
+	100% {
+		color: white
+	}
 }
 
-
-.discover-btn{    
-   
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    color: rgba(0,0,0,0);
-    -webkit-animation-name: example2;
-            animation-name: example2;  
-    -webkit-animation-duration: 4s;  
-            animation-duration: 4s;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
-    font-size: 1.5rem;
-    color: rgba(0,0,0,0);
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-   
+.discover-btn {
+	font-size: 1.2rem;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0);
+	-webkit-animation-name: example2;
+	animation-name: example2;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+	font-size: 1.5rem;
+	color: rgba(0, 0, 0, 0);
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes example2 {
-    100% {color: white; background: #212121;}
+	100% {
+		color: white;
+		background: #212121;
+	}
 }
 
 @keyframes example2 {
-    100% {color: white; background: #212121;}
+	100% {
+		color: white;
+		background: #212121;
+	}
 }
 
-@media(max-width: 960px){
-    .container{
-        padding-right: 3rem;
-        padding-left: 3rem;
-    }
+@media(max-width: 960px) {
+	.container {
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
 }

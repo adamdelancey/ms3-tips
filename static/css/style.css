@@ -5,34 +5,32 @@
 * Browsers: last 4 version
 */
 
-main{
-    margin: 0;
+main {
+	margin: 0;
 }
 
-body{
-    overflow-x: hidden;
-    font-family: 'Sarala', sans-serif;
-    background: #eeeeee 
-
+body {
+	overflow-x: hidden;
+	font-family: 'Sarala', sans-serif;
+	background: #eeeeee
 }
 
-nav li a{
-    color:white
+nav li a {
+	color: white
 }
 
-strong{
-    font-weight: 700;
+strong {
+	font-weight: 700;
 }
 
-
-.uppercase{
-    text-transform: uppercase;
+.uppercase {
+	text-transform: uppercase;
 }
 
-.card-image img{
-    height: 30vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+.card-image img {
+	height: 30vh;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .tips-hero {
@@ -48,16 +46,16 @@ strong{
 	color: black;
 }
 
-.tips-hero h1{
-    margin: 0;
-    padding-top: 20vh;
+.tips-hero h1 {
+	margin: 0;
+	padding-top: 20vh;
 }
 
-.tip-card img{
-    width: 100%;
-    height: 80vh;
-    -o-object-fit: contain;
-       object-fit: contain;
+.tip-card img {
+	width: 100%;
+	height: 80vh;
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .profile-hero {
@@ -72,59 +70,57 @@ strong{
 	background-position: 50% 50%;
 }
 
-.profile-hero h2{    
-    margin-top: 25vh;
+.profile-hero h2 {
+	margin-top: 25vh;
 }
 
-.profile-tips a{
-    margin-bottom: 10px;
+.profile-tips a {
+	margin-bottom: 10px;
 }
 
-.filters{
-    padding-top: 50px;
+.filters {
+	padding-top: 50px;
 }
 
-.filters i{
-    border-radius: 100%;
-    border: black solid 2px;
-    padding: 15px;
-    font-size: 200%;
+.filters i {
+	border-radius: 100%;
+	border: black solid 2px;
+	padding: 15px;
+	font-size: 200%;
 }
 
-.filters a{
-    font-size: 200%;
+.filters a {
+	font-size: 200%;
 }
 
 @media only screen and (max-width: 600px) {
-  .filters i{    
-    border: black solid 2px;
-    padding: 10px;
-    font-size: 100%;
-    }
-
-    .filters a{
-    font-size: 100%;
-    }
+	.filters i {
+		border: black solid 2px;
+		padding: 10px;
+		font-size: 100%;
+	}
+	.filters a {
+		font-size: 100%;
+	}
 }
 
-
-.card-action{
-    padding-top: 0px;
-    padding-bottom: 0px;
+.card-action {
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
-.card-action{
-    font-size: 12px;
+.card-action {
+	font-size: 12px;
 }
 
-.add-tip-btn{
-    margin-bottom: 15px;
+.add-tip-btn {
+	margin-bottom: 15px;
 }
 
 .social-icons i {
 	padding: 25px;
-    font-size: 200%;
-    color: white;
+	font-size: 200%;
+	color: white;
 }
 
 @media screen and (max-width:600px) {
@@ -133,7 +129,7 @@ strong{
 	}
 }
 
-.return-home{
-    color: black;
-    font-weight: bold;
+.return-home {
+	color: black;
+	font-weight: bold;
 }

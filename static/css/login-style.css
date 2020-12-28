@@ -14,27 +14,24 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-repeat: no-repeat;
-    background-position: 50% 50%;
-    color: black;
+	background-position: 50% 50%;
+	color: black;
 }
 
-footer{
-    display: none;
+footer {
+	display: none;
 }
 
-h3{
-    margin: 0;
+h3 {
+	margin: 0;
 }
 
-p{
-    padding-top: 10px;
+p {
+	padding-top: 10px;
 }
 
-
-.card-panel{    
-    background: rgba(255,255,255,0.9);    
-    padding-top: 15px;
-    margin-top: 50px;
-
-
+.card-panel {
+	background: rgba(255, 255, 255, 0.9);
+	padding-top: 15px;
+	margin-top: 50px;
 }

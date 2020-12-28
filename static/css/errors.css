@@ -1,29 +1,26 @@
-body{
-    background-color: #212121;
-    color: #eeeeee;
+body {
+	background-color: #212121;
+	color: #eeeeee;
 }
 
-nav, footer{
-    display: none;
+nav,
+footer {
+	display: none;
 }
 
-
-
-h1{
-    font-size: 2000%;
-    padding-top: 5%;
+h1 {
+	font-size: 2000%;
+	padding-top: 5%;
 }
 
-a{
-    color: white;
-    font-weight: bold
+a {
+	color: white;
+	font-weight: bold
 }
-
-
 
 @media only screen and (max-width: 600px) {
-  h1{
-    font-size: 700%;
-    padding-top: 35%;
-    } 
+	h1 {
+		font-size: 700%;
+		padding-top: 35%;
+	}
 }
