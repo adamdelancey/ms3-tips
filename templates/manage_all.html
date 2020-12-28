@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if session.user|lower == "admin"|lower %}
 
 <h2 class="center-align">Manage All Tips</h2>
 <div class="container">
 <div class="row">
-    {% for tip in all_tips %}   
+    
+        {% for tip in all_tips %}   
      
     <div class="col s12 m4">        
         <div class="card">
@@ -36,7 +38,15 @@
         </div>        
     </div>
     
-    {% endfor %}
+        {% endfor %}
+{% else %}
+<div class="center-align">
+    <h2>Access denied!</h2>
+    <h4>This page is for users only.
+    <p><a href="{{ url_for('tips') }}" class="return-home">Take me back home.</a></p>
+</h4>
+</div>
+{% endif %}
 </div>
 </div>
 {% endblock %}

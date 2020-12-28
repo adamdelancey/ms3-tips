@@ -31,7 +31,8 @@ def tips():
 
 @app.route('/tips/<category_name>')
 def filter_tips(category_name):
-    category = list(mongo.db.tips.find({"category_name": category_name}))
+    category = list(mongo.db.tips.find({
+        "category_name": category_name}).sort("tip_date", -1))
     print(category_name)
     return render_template(
         "tips.html", category=category, page_title=category_name)
@@ -110,7 +111,7 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
 
-    # get session user's usernamae from db
+    # get session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -148,7 +149,7 @@ def add_tip():
         return redirect(url_for(
             "profile", username=session["user"]))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = mongo.db.categories.find().sort("tip_date", -1)
     return render_template("add_tip.html", categories=categories)
 
 
@@ -170,7 +171,7 @@ def edit_tip(tip_id):
             "profile", username=session["user"]))
 
     tip = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = mongo.db.categories.find().sort("tip_date", -1)
     return render_template("edit_tip.html", tip=tip, categories=categories)
 
 
@@ -186,6 +187,11 @@ def delete_tip(tip_id):
 def manage_all():
     all_tips = list(mongo.db.tips.find().sort("category_name", 1))
     return render_template("manage_all.html", all_tips=all_tips)
+
+
+@app.errorhandler(403)
+def forbidden(error):
+    return render_template('errors/403.html'), 403
 
 
 @app.errorhandler(404)

@@ -320,24 +320,16 @@ to ensure there were no syntax errors in the project.
 
 This was used to parse CSS and add vendor prefixes in order to ensure that the CSS styling works properly across all 
 browsers. I have added the below header to my CSS styles sheet in order to show this:
-<p> <img src="documentation/screenshots/css-prefix.jpg">  </p>
+<p> <img src="documentation/screenshots/css-prefixer.jpg">  </p>
 
 ## Lighthouse
 
 <p >Desktop<img src="documentation/screenshots/lighthouse.jpg">
 Mobile<img src="documentation/screenshots/lighthouse-mobile.jpg"></p>
 
-From Chrome Developer Tools, this Lighthouse score is based on the homepage while being viewed on desktop and mobile. I worked hard on
-ensuring high scores across the site in particular by putting every image through [Tiny PNG](https://tinypng.com/), and improving 
-SEO scores by adding a meta description to each page. The lower 'Best Practices' score is primarily due to the JavaScript
-libraries being used for the site, specifically JQuery.
-
-## EmailJS API
-
-I have tested this manually on every page to ensure that the contact form is being sent through successfully. You can see this 
-here:
-
-<p> <img src="documentation/screenshots/emailjs.jpg">  </p>
+From Chrome Developer Tools, this Lighthouse score is based on the homepage while being viewed on desktop and mobile. The biggest variant
+throughout the site is the performance score, which is predominantly due to the image link added by users to the site for each individual 
+tip, making it quite hard to control. 
 
 
 ## Testing User Stories from User Experience Section
@@ -345,29 +337,53 @@ here:
 -   #### First Time Visitor Goals - I want to:
 
     1. Quickly understand the service being provided by Tips and how I can interact with the service.
-        - *XXXX*
+        - *Upon loading the page the user presented with a short looped video on Stockholm, as well as the simple page slogan of 'Do 
+        What the Locals Do.' Next, on the Tips landing page, there is a short description which tells the user exactly what the website 
+        is about and how they can interact. In addition, the dynamic and easy to understand navbar helps the user to interact easily.*
+
     2. Be able to easily browse the various 'tips' in Stockholm and find something that interests me.
-        - *XXXX*
+        - *As you can see below, large icon buttons are presented to user to be able to filter their results immediately into the main 
+        categories of eat, drink, in, out and stay. Additionally, there is a search bar to help the user find the desired result*
+        <p><img src="documentation/screenshots/filters.jpg"></p>
+
     3. Be able to register to the website and add my own 'tips'.
-        - *XXXX*
+        - *Upon entering the landing page, the user is able to either login to an existing account or register to the website. From here, 
+        they are redirected to their own profile page, where they can add their own tips, as well as edit and delete existing ones.*
     4. Be able to comfortably navigate throughout the site between my own tips and other users'.
-        - *XXXX*
+        - *On the initial page, it is only possible to view all the tips. However, on the profile page, the user is presented with the 
+        tips that they have added under 'Your Tips.' From here, there is the additional feature on the cards of edit and delete*
+        <p><img src="documentation/screenshots/your-tips.jpg"></p>
     5. Get an instant first-impression that this is a professional, modern and up-to-date site with good UX.
-        - *XXXX*
+        - *By adding the short full-screen video on the page that is first loaded, I believe that this creates the desired effect.*
 
 
 -   #### Frequent User Goals - I want to:
 
     1. Easily be able to check if any new tips have been added that may interest me.
-        - *XXXX*
+        - *The main tips landing page, as well as the filtered pages, or all sorted by the order of which they were added to the site. 
+        Therefore, any new tip that the user has not seen before will be viewed at the top of the page immediately, making them easy to find.*
     2. Login to the account that I had previously set up and see my own submissions.
-        - *XXXX*
+        - *On the same page, on the navbar, there is the option to login, which redirects the user to their own profile page where they can 
+        see the tips that they have previously submitted.*
     3. Add more tips to the website that I may not have done already.
-        - *XXXX*
+        - *On their profile page, there is an 'Add A Tip' button near the tip of the page, which allows the user to add their own. *
     4. Edit my own tips.
-        - *XXXX*
+        - *As mentioned previously, on the user's profile page there is an edit button where they can edit their own tip.*
     5. Delete any tips that are no longer relevant.
-        - *XXXX*
+        - *Similarly, they can delete their own tips. With defensive programming in mind, if the user clicks delete then a modal appears 
+        asking the user if they are sure that they want to delete the tip, which will then permanently remove it.*
+        <p><img src="documentation/screenshots/modal.jpg"></p>
+
+
+-   #### Admin Goals - I want to:
+   
+    1. Be able to create, read, update and delete all tips on the site.
+        - *If the admin logs into their 'admin' account, then they have a new option in the navbar - Manage All. This allows the user to 
+        see all of the available tips and edit and delete them as their choosing. Using jinja templating, I have ensured that this page 
+        is only available to view if the user logged in as the admin, therefore avoiding other users forcing their way onto the page. 
+        If not, the following error appears:*  
+        <p><img src="documentation/screenshots/access-denied.jpg"></p>
+
 
 ## Fixed Bugs
 After deployment, I found multiple bugs that needed addressing:
